@@ -1,6 +1,6 @@
 # 🩵 Blue Zone Clinic – Redesign
 
-EEste projeto é um **redesign do site da [Blue Zone Clinic](https://bluezoneclinic.com.br/)**, com o objetivo de **reformular o design e aprimorar a usabilidade**.  
+Este projeto é um **redesign do site da [Blue Zone Clinic](https://bluezoneclinic.com.br/)**, com o objetivo de **reformular o design e aprimorar a usabilidade**.  
 O site original apresentava **problemas de layout quebrado** e **informações confusas e repetidas**, então esta nova versão busca oferecer uma experiência mais **limpa, intuitiva e moderna**.
 
 ---
