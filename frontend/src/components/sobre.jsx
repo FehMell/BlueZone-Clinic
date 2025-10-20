@@ -32,11 +32,12 @@ function Sobre() {
           <div className="flex items-center justify-center gap-2 pt-6 group cursor-pointer relative">
             <div className="absolute inset-0 bg-amber-400/0 group-hover:bg-amber-400/10 blur-md rounded-full transition-all duration-300"></div>
             <div className="bg-amber-500 rounded-full p-2 relative z-10 transition-transform duration-300 group-hover:scale-110 hover:bg-white">
-              <CgInstagram size={24} className="text-white hover:text-amber-500" />
+              <a href="https://www.instagram.com/thiagogarciadr/"><CgInstagram size={24} className="text-white hover:text-amber-500" /></a>
             </div>
-            <p className="text-gray-300 text-xl relative z-10 transition-all duration-300 group-hover:text-gray-300">
+            <a href="https://www.instagram.com/thiagogarciadr/"><p className="text-gray-300 text-xl relative z-10 transition-all duration-300 group-hover:text-gray-300">
               @thiagogarciadr
             </p>
+            </a>
           </div>
         </div>
 
