@@ -7,6 +7,7 @@ O site original apresentava **problemas de layout quebrado** e **informações c
 
 ### 🎨 Design
 Desenvolvido por [Liv-Inn](https://github.com/liv-inn)
+
 Desenvolvida por [FehMell](https://github.com/FehMell)
 
 

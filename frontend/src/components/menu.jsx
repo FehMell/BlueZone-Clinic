@@ -16,7 +16,7 @@ function Menu() {
          <ul className="flex gap-8 text-black">
           <li className="hover:text-gray-800 cursor-pointer">Início</li>
           <li className="hover:text-gray-800 cursor-pointer">Sobre</li>
-          <li className="hover:text-gray-800 cursor-pointer">Beleza e Bem-Estar</li>
+         
 
         
           <li className="relative group cursor-pointer hover:text-gray-700 flex items-center">
