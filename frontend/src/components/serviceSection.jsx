@@ -98,7 +98,7 @@ function ServicesSection() {
         <p className="font-manrope pb-8 text-gray-500 text-sm">Unimos conforto às mais avançadas tecnologias médicas para refletir nosso compromisso com o seu cuidado integral.</p>
 
         <div className="relative pt-8">
-          {/* Container com padding top para os ícones */}
+         
           <div className="pt-8">
             <Swiper 
               modules={[Navigation]}
@@ -119,7 +119,7 @@ function ServicesSection() {
             >
               {services.map((service, index) => (
                 <SwiperSlide key={index} style={{ height: 'auto' }}>
-                  <div className="h-full pt-4"> {/* Padding adicional para o ícone */}
+                  <div className="h-full pt-4"> 
                     <ServiceCard
                       icon={service.icon}
                       title={service.title}
@@ -154,7 +154,7 @@ function ServicesSection() {
       `}</style>
 
       <div className="text-center pt-20">
-       <a href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20oferecidos%20pela%20Blue%20Zone."> <button className="bg-[#D3AF37] p-3 px-10 rounded-lg font-semibold text-white transform transition-transform duration-300 hover:scale-110 hover:bg-[#B38A4B]">Agendar Consulta</button></a>
+       <a href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20oferecidos%20pela%20Blue%20Zone." target='_blank'> <button className="bg-[#D3AF37] p-3 px-10 rounded-lg font-semibold text-white transform transition-transform duration-300 hover:scale-110 hover:bg-[#B38A4B]">Agendar Consulta</button></a>
       </div>
     </div>
   );

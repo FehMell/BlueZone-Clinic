@@ -34,7 +34,7 @@ function Sobre() {
             <div className="bg-amber-500 rounded-full p-2 relative z-10 transition-transform duration-300 group-hover:scale-110 hover:bg-white">
               <a href="https://www.instagram.com/thiagogarciadr/"><CgInstagram size={24} className="text-white hover:text-amber-500" /></a>
             </div>
-            <a href="https://www.instagram.com/thiagogarciadr/"><p className="text-gray-300 text-xl relative z-10 transition-all duration-300 group-hover:text-gray-300">
+            <a href="https://www.instagram.com/thiagogarciadr/" target="_blank"><p className="text-gray-300 text-xl relative z-10 transition-all duration-300 group-hover:text-gray-300">
               @thiagogarciadr
             </p>
             </a>
