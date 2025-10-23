@@ -14,18 +14,18 @@ function Footer() {
           
           
           <div>
-            <h3 className="text-xl font-bold font-marcellus pb-4 text-[#D3AF37]">Onde estamos:</h3>
+            <h3 className="text-xl font-semibold font-marcellus pb-4 text-[#D3AF37]">Onde estamos:</h3>
             <p className="text-white mt-2 font-manrope text-xs">Alameda Campinas, 728 – CJ 1201 – </p>
             <p className="font-manrope text-xs">Jardim Paulista, São Paulo – SP.</p>
             
-            <h3 className="text-xl font-marcellus py-4 text-[#D3AF37]">Horário de Funcionamento:</h3>
+            <h3 className="text-xl font-marcellus py-4 text-[#D3AF37] font-semibold">Horário de Funcionamento:</h3>
             <p className="font-manrope text-xs">Segunda à Sexta: 08h00 às 20h00.</p>
             <p className="font-manrope text-xs">Sábado: 09h00 às 17h00.</p>
           </div>
 
           
           <div>
-            <h3 className="text-xl font-marcellus text-[#D3AF37] pb-2">Contato:</h3>
+            <h3 className="text-xl font-marcellus text-[#D3AF37] pb-2 font-semibold">Contato:</h3>
             <ul>
                <a href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20oferecidos%20pela%20Blue%20Zone." target="_blank">
               <li className="pb-2 flex items-center gap-2 text-xs">
@@ -44,7 +44,7 @@ function Footer() {
               </li>
             </ul>
 
-            <h3 className="text-xl font-marcellus py-2 text-[#D3AF37]">Redes Sociais:</h3>
+            <h3 className="text-xl font-marcellus py-2 text-[#D3AF37] font-semibold">Redes Sociais:</h3>
             <ul className="font-manrope text-xs">
              <a href="https://www.instagram.com/thiagogarciadr/" target="_blank"> <li className="pb-2 flex items-center gap-2">
                 <div className="bg-[#D3AF37] rounded-full p-2 flex items-center justify-center">
