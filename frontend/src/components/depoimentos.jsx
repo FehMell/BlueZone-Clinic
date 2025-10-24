@@ -16,7 +16,7 @@ function Depoimentos() {
       .then((res) => res.json())
       .then((data) => {
         if (data.result && data.result.reviews) {
-          setReviews(data.result.reviews.slice(0, 3)); 
+          setReviews(data.result.reviews.slice(0, 3));
         }
       })
       .catch((err) => console.error("Erro ao buscar avaliações:", err));
@@ -39,13 +39,13 @@ function Depoimentos() {
         </a>
       </p>
 
-      <div className="flex flex-col md:flex-row gap-6 max-w-6xl mx-auto ">
+      <div className="flex flex-col md:flex-row gap-2 max-w-6xl mx-auto">
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="flex-1 rounded-2xl  p-6   border border-transparent"
+            className="flex-1 rounded-sm p-6 border border-gray-50 shadow-2xl shadow-gray-300 bg-white"
           >
-            <div className="flex flex-col items-center mb-3">
+            <div className="flex flex-col items-center mb-2">
               <img
                 src={review.profile_photo_url}
                 alt={review.author_name}
@@ -69,7 +69,7 @@ function Depoimentos() {
                 <FaStar key={i} size={15} />
               ))}
             </p>
-            <p className="text-gray-500 text-xs italic font-manrope pt-2 text-center">
+            <p className="text-gray-400 text-xs italic font-manrope pt-2 text-center">
               "{review.text}"
             </p>
           </div>
@@ -78,8 +78,7 @@ function Depoimentos() {
 
       <div className="justify-center pt-12 flex items-center gap-2 text-gray-500 text-sm font-manrope pb-10 hover:text-gray-700 transition-transform duration-300 hover:scale-110">
         <a
-          href="https://www.google.com/maps/place/Blue+Zone+Clinic/@-23.5675052,-46.6576791,17z/data=!4m7!3m6!1s0x94ce576c57877615:0x80a766d81be331f9!8m2!3d-23.5675101!4d-46.6551042!9m1!1b1
-    "
+          href="https://www.google.com/maps/place/Blue+Zone+Clinic/@-23.5675052,-46.6576791,17z/data=!4m7!3m6!1s0x94ce576c57877615:0x80a766d81be331f9!8m2!3d-23.5675101!4d-46.6551042!9m1!1b1"
           target="_blank"
           rel="noopener noreferrer"
         >

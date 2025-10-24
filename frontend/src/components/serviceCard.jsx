@@ -21,7 +21,7 @@ const ServiceCard = ({ icon, title, description, className = "", showButton = tr
       </div>
 
       {showButton ? (
-        <div className="text-center pt-6">
+        <div className="text-center pt-6 ">
           <button className="bg-[#D3AF37] text-white font-bold px-6 py-2 rounded-md transform transition-transform duration-300 hover:scale-110 hover:bg-[#B38A4B] text-sm">
             SAIBA MAIS
           </button>
