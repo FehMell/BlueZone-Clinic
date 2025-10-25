@@ -56,15 +56,9 @@ function Menu() {
             onMouseLeave={handleMouseLeave}
           > 
           
-            <Link 
-              to="tratamentos"       
-              smooth={true}   
-              duration={500}   
-              offset={-50}     
-              className="hover:text-gray-700 flex items-center"
-            >
+          
               Tratamentos
-            </Link>
+            
 
           
             <RiArrowDropUpFill
@@ -77,7 +71,7 @@ function Menu() {
           
             {open && (
               <ul className="absolute top-full left-0 mt-1 text-black shadow-lg py-2 px-1 w-48 max-h-80 overflow-y-auto bg-white z-50 font-manrope text-xs">
-                <li className="px-4 py-1 hover:text-white hover:bg-gray-800">Emagrecimento Saudável</li>
+               <a href="/emagrecimento"> <li className="px-4 py-1 hover:text-white hover:bg-gray-800">Emagrecimento Saudável</li></a>
                <a href="/estetica"> <li className="px-4 py-1 hover:text-white hover:bg-gray-800">Estética</li> </a>
                 <li className="px-4 py-1 hover:text-white hover:bg-gray-800">Hipertrofia</li>
                 <li className="px-4 py-1 hover:text-white hover:bg-gray-800">Menopausa</li>

@@ -6,7 +6,7 @@ function Inicio() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 bg-white">
       
-      <div className="bg-white flex flex-col justify-center items-center p-6 lg:p-8 w-full max-w-[90%] lg:max-w-[500px] mx-auto lg:ml-36 mt-4 lg:mt-2 relative overflow-hidden order-2 lg:order-1">
+      <div className="bg-white flex flex-col justify-center items-center p-6 lg:p-8 w-full max-w-[90%] lg:max-w-[500px] mx-auto lg:ml-34 mt-4 lg:mt-2 relative overflow-hidden order-2 lg:order-1">
        
         <div className="absolute top-0 left-[-50%] w-1/2 h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 rotate-[8deg] animate-shimmer"></div>
 
