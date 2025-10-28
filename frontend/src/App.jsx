@@ -3,6 +3,9 @@ import Home from "./pages/Home";
 import Estetica from "./pages/Estetica";
 import Menu from "./components/menu";
 import Emagrecimento from "./pages/Emagrecimento";
+import Hipertrofia from "./pages/Hipertrofia";
+import Menopausa from "./pages/Menopausa";
+import ReposicaoHormonal from "./pages/ReposicaoHormonal";
 
 function App() {
   return (
@@ -15,6 +18,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/estetica" element={<Estetica />} />
         <Route path="/emagrecimento" element={<Emagrecimento />} />
+        <Route path="/hipertrofia" element={<Hipertrofia />} />
+        <Route path="/menopausa" element={<Menopausa />} />
+        <Route path="/reposicao-hormonal-masculina" element={<ReposicaoHormonal />} />
+
+
+
       </Routes>
     </Router>
   );

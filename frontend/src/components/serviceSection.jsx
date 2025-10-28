@@ -19,55 +19,65 @@ function ServicesSection() {
       title: "Emagrecimento Saudável",
       description: <> Conheça o Programa <span className="font-semibold"> Blue Health+ de Emagrecimento </span>, um método diferenciado que transforma a vida de centenas de pessoas todos os meses. Muito além da perda de peso, promovemos saúde, qualidade de vida e autoconfiança.</>,
       icon: FaLeaf,
-      showButton: true
+      showButton: true,
+      link: "/emagrecimento"
     },
     {
       title: "Reposição Hormonal",
       description: "Indicada para homens com baixos níveis de testosterona. O tratamento melhora sintomas de cansaço, baixa libido, disfunção erétil, dificuldade para emagrecer e ganhar massa muscular.",
       icon: FaHeartbeat,
-      showButton: true
+      showButton: true,
+      link: null
     },
     {
       title: "Hipertrofia Muscular e Alta Performance",
       description: "Elaboração de um plano personalizado às suas necessidades, visando melhoria do condicionamento físico, aumento da força e massa muscular. Inclui orientações sobre exercícios, alimentação e correção de distúrbios hormonais.",
       icon: FaDumbbell,
-      showButton: true
+      showButton: true,
+      link: "/hipertrofia"
     },
     {
       title: "Implantes Hormonais",
       description: "Implantes subcutâneos liberam hormônios como testosterona e estrogênio de forma contínua, corrigindo déficits hormonais e aliviando sintomas como cansaço, queda de libido, dificuldade para emagrecer e ganho de gordura.",
       icon: FaSyringe,
-      showButton: true
+      showButton: true,
+      link: null
     },
     {
       title: "Menopausa",
       description: "Focado em melhorar a qualidade de vida das mulheres durante a menopausa, nosso tratamento alivia sintomas como ondas de calor, instabilidade emocional, fadiga, insônia, baixa libido, suores noturnos e ressecamento vaginal.",
       icon: FaHeart,
-      showButton: true
+      showButton: true,
+      link: null
     },
     {
       title: "Terapias Injetáveis",
       description: "Administração direta de vitaminas, minerais, aminoácidos, antioxidantes e outros ativos, indicados de acordo com suas necessidades específicas, via intramuscular ou intravenosa.",
       icon: FaSyringe,
-      showButton: true
+      showButton: true,
+      link: null
     },
     {
       title: "Bioimpedância",
       description: "Exame para avaliar a composição corporal, fornecendo informações essenciais como percentual de massa magra e gordura, além de análises detalhadas do corpo.",
       icon: FaWeight,
-      showButton: false
+      showButton: false,
+      link: null
     },
     {
       title: "Nutricionista",
       description: <> Elaboração de um plano alimentar personalizado por nossa <span className="font-semibold">Nutricionista Ana Paula </span>, alinhado aos seus objetivos de saúde, estética e bem-estar geral. </>,
       icon: FaUserNurse,
-      showButton: false
+      showButton: false,
+      link: null
+
     },
     {
       title: "Estética Corporal e Facial",
       description: "Procedimentos que promovem harmonia, rejuvenescimento, firmeza e confiança, auxiliando na recuperação da autoestima.",
       icon: FaSpa,
-      showButton: true
+      showButton: true,
+      link:"/estetica"
     }
   ];
 
@@ -89,7 +99,7 @@ function ServicesSection() {
   }, [swiperInstance]);
 
   return (
-    <div className="py-8 lg:py-10 px-4 lg:px-6 bg-neutral-100">
+    <div className="py-8 lg:py-10 px-4 lg:px-6 bg-neutral-100" id="tratamentos">
       <div className="text-center max-w-7xl mx-auto">
         <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">TRATAMENTOS ENCONTRADOS</h2>
         <h3 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">NA BLUE ZONE CLINIC</h3>
@@ -133,6 +143,7 @@ function ServicesSection() {
                       title={service.title}
                       description={service.description}
                       showButton={service.showButton}
+                      link={service.link}
                     />
                   </div>
                 </SwiperSlide>
