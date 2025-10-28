@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import ServiceCard from './ServiceCard';
+import ServiceCard from './serviceCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -41,7 +41,7 @@ function ServicesSection() {
       description: "Implantes subcutâneos liberam hormônios como testosterona e estrogênio de forma contínua, corrigindo déficits hormonais e aliviando sintomas como cansaço, queda de libido, dificuldade para emagrecer e ganho de gordura.",
       icon: FaSyringe,
       showButton: true,
-      link: null
+      link: "/implantes-hormonais"
     },
     {
       title: "Menopausa",
@@ -55,7 +55,7 @@ function ServicesSection() {
       description: "Administração direta de vitaminas, minerais, aminoácidos, antioxidantes e outros ativos, indicados de acordo com suas necessidades específicas, via intramuscular ou intravenosa.",
       icon: FaSyringe,
       showButton: true,
-      link: null
+      link: "/terapias-injetaveis"
     },
     {
       title: "Bioimpedância",

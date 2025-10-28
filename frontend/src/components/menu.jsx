@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { RiArrowDropUpFill } from "react-icons/ri";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 function Menu() {
   const [open, setOpen] = useState(false);

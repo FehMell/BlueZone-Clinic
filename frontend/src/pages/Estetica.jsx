@@ -155,23 +155,28 @@ function Estetica() {
         </div>
 
       
-        <div className="hidden lg:block relative order-1 lg:order-2 h-96 lg:h-auto overflow-visible">
+        <div className="hidden lg:block relative order-1 lg:order-2 h-96 lg:h-auto overflow-hidden">
           <div 
-            className="w-full h-full bg-cover bg-center"
+            className="w-full h-full bg-cover bg-center relative z-10"
             style={{ backgroundImage: `url(${Local})` }}
           ></div>
           <div className="absolute inset-0 overflow-hidden z-20 pointer-events-none">
             <div className="absolute left-[5%] w-[90%] h-full bg-gradient-to-r from-transparent via-white/80 to-transparent animate-reflexoLocal"></div>
           </div>
-          <img 
-            src={Thiago} 
-            alt="Dr. Thiago" 
-            className="
-              absolute bottom-0  translate-x-[-20%] w-5/6 lg:w-[55%] lg:right-16 xl:right-56 max-w-full object-contain
-              transition-transform duration-1000 ease-in-out
-              hover:-translate-y-1 z-50
-            "
-          />
+          
+          {/* wrapper ensures the PNG stays fully inside the background and doesn't overflow */}
+          <div className="absolute inset-0 z-30 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-16">
+            <img 
+              src={Thiago} 
+              alt="Dr. Thiago" 
+              className="
+                object-contain max-w-full max-h-full
+                w-auto h-auto lg:w-[50%] xl:w-[55%] 2xl:w-[50%]
+                transition-transform duration-1000 ease-in-out hover:-translate-y-1
+                z-30
+              "
+            />
+          </div>
         </div>
       </div>
 
