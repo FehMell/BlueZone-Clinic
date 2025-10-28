@@ -27,7 +27,7 @@ function ServicesSection() {
       description: "Indicada para homens com baixos níveis de testosterona. O tratamento melhora sintomas de cansaço, baixa libido, disfunção erétil, dificuldade para emagrecer e ganhar massa muscular.",
       icon: FaHeartbeat,
       showButton: true,
-      link: null
+      link: "reposicao-hormonal-masculina"
     },
     {
       title: "Hipertrofia Muscular e Alta Performance",
@@ -48,7 +48,7 @@ function ServicesSection() {
       description: "Focado em melhorar a qualidade de vida das mulheres durante a menopausa, nosso tratamento alivia sintomas como ondas de calor, instabilidade emocional, fadiga, insônia, baixa libido, suores noturnos e ressecamento vaginal.",
       icon: FaHeart,
       showButton: true,
-      link: null
+      link: "/menopausa"
     },
     {
       title: "Terapias Injetáveis",
