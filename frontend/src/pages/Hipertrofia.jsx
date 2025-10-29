@@ -162,7 +162,7 @@ function Hipertrofia() {
             <div className="absolute left-[5%] w-[90%] h-full bg-gradient-to-r from-transparent via-white/80 to-transparent animate-reflexoLocal"></div>
           </div>
           
-          {/* wrapper ensures the PNG stays fully inside the background and doesn't overflow */}
+         
           <div className="absolute inset-0 z-30 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-16">
             <img
               src={Thiago}
@@ -180,6 +180,7 @@ function Hipertrofia() {
 
       
       <div className="text-center pt-20">
+        
         <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">
           TRATAMENTOS DE HIPERTROFIA ENCONTRADOS
         </h2>
@@ -265,7 +266,7 @@ function Hipertrofia() {
         `}
       </style>
       <WhatsAppButton />
-      <Footer />
+     
     </div>
   );
 }

@@ -8,6 +8,7 @@ import Depoimentos from "../components/depoimentos";
 import Espaco from "../components/espaco";
 import WhatsAppButton from "../components/whatsappButton";
 import Inicio from "../components/inicio";
+import Agendar from "../components/agendar"
 
 function Home() {
   return (
@@ -15,11 +16,11 @@ function Home() {
       
       
       <Inicio />
-      <Sobre />
+      <Sobre /> 
       <ServiceSection />
       <Depoimentos />
       <Espaco />
-      <Footer />
+      <Agendar />
       <WhatsAppButton />
     </div>
   );

@@ -13,9 +13,11 @@ import { FaDumbbell, FaSyringe } from "react-icons/fa";
 import { FaHandSparkles } from "react-icons/fa";
 import { LiaFileMedicalAltSolid } from "react-icons/lia";
 import { GiPill } from "react-icons/gi";
-import { MdOutlineNoFood } from "react-icons/md";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import WhatsAppButton from "../components/whatsappButton";
+import { RiNumber1, RiNumber2, RiNumber3, RiNumber4, RiNumber5, RiNumber6   } from "react-icons/ri";
+import ImplanteHormonal from "../images/ImplanteHormonal.png"
+import Agendar from "../components/agendar"
 
 function Implantes() {
   const prevRef = useRef(null);
@@ -25,35 +27,7 @@ function Implantes() {
   const [isEnd, setIsEnd] = useState(false);
 
   const services = [
-    {
-      title: "Avaliação Médica",
-      description:
-        "Consulta médica com exames para avaliar e indicar o tratamento mais adequado.",
-      icon: LiaFileMedicalAltSolid,
-      showButton: false,
-    },
 
-    {
-      title: "Vantagens dos Implantes Hormonais",
-      description: (
-        <>
-          Principais benefícios:
-          <br /> <br />
-          <div className="text-left">
-            1) Liberação contínua e estável. <br />
-            2) Praticidade — sem administração diária. <br />
-            3) Longa duração (6–12 meses). <br />
-            4) Conforto — menos desconforto em comparação com outras formas de
-            administração. <br />
-            5) Melhor Resposta Terapêutica — níveis hormonais mais consistentes.{" "}
-            <br />
-            6) Discrição - são praticamente invisíveis sob a pele. <br />
-          </div>
-        </>
-      ),
-      icon: FaHandSparkles,
-      showButton: false,
-    },
     {
       title: "Menopausa",
       description:
@@ -175,15 +149,15 @@ return (
                         Implantes hormonais liberam doses estáveis e controladas diretamente
                         na corrente sanguínea, oferecendo praticidade (sem doses diárias),
                         maior constância nos níveis hormonais e duração prolongada
-                        (meses). Indicados para quem busca alívio de sintomas, melhora da
-                        energia, sono, libido e performance metabólica.
+                        (meses). Indicados para quem busca <span className="font-semibold"> alívio de sintomas, melhora da
+                        energia, sono, libido e performance metabólica. </span>
                     </p>
 
                     <p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-                        Na Blue Zone Clinic avaliamos cada caso individualmente e
-                        indicamos o implante mais adequado — seja para reposição,
+                        Na <span className="font-semibold"> Blue Zone Clinic</span> avaliamos cada caso individualmente e
+                        indicamos o implante mais adequado — seja para <span className="font-semibold"> reposição,
                         anticoncepção, manejo da menopausa, ganho de massa muscular ou
-                        melhora da qualidade de vida.
+                        melhora da qualidade de vida. </span>
                     </p>
 
                     <div className="border-2 border-[#D3AF37] px-1 py-1 hover:scale-110 transform transition-transform duration-300 mb-4 mt-8 ">
@@ -210,7 +184,7 @@ return (
                     <div className="absolute left-[5%] w-[90%] h-full bg-gradient-to-r from-transparent via-white/80 to-transparent animate-reflexoLocal"></div>
                 </div>
 
-                {/* wrapper ensures the PNG stays fully inside the background and doesn't overflow */}
+               
                 <div className="absolute inset-0 z-30 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-16">
                     <img
                         src={Thiago}
@@ -225,15 +199,105 @@ return (
                 </div>
             </div>
         </div>
+        <div className="bg-black">
+          
+          <h2 className="uppercase text-center font-marcellus text-xl lg:text-[24px] xl:text-[24px] font-bold text-[#D3AF37] leading-tight pb-4 pt-12">Benefícios dos Implantes Hormonais</h2>
+          <h2 className="uppercase text-center font-marcellus text-xl lg:text-[24px] xl:text-[24px] font-bold text-[#D3AF37] leading-tight pb-12">em comparação a outras formas de reposição</h2>
+          <div className="flex flex-col lg:flex-row items-start justify-center gap-8">
+ <div className="relative bg-black text-center py-10 lg:py-20 px-4 lg:px-40 overflow-hidden">
+ 
+  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-amber-400/15 via-purple-500/10 to-blue-400/15 transform -rotate-6 opacity-40"></div>
+  <div className="absolute top-0 left-0 w-80 h-80 bg-purple-500/10 rounded-full blur-[90px]"></div>
+  <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-400/10 rounded-full blur-[90px]"></div>
 
-        <div className="text-center pt-20">
-            <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">
-                O QUE OS IMPLANTES PODEM OFERECER
+ 
+  <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 relative z-10">
+    
+    <div className="flex flex-col items-center order-1 lg:order-1">
+      <div className="h-64 lg:h-[700px] w-full max-w-xs lg:max-w-none">
+        <img
+          src={ImplanteHormonal}
+          alt="Procedimento de Implante Hormonal"
+          className="h-full w-full object-cover rounded-3xl lg:rounded-b-full"
+        />
+      </div>
+    </div>
+
+  
+    <div className="flex flex-col justify-start text-gray-100 max-w-full lg:max-w-md text-center lg:text-left order-2 lg:order-2">
+      <h3 className="flex items-center gap-2 justify-center lg:justify-start text-lg font-marcellus pb-2">
+        <RiNumber1 className="text-[#D3AF37]" />
+        Liberação Contínua e Controlada
+      </h3>
+      <p className="text-center lg:text-left font-manrope pb-4 text-sm">
+        Proporcionam uma liberação gradual de hormônios, evitando flutuações hormonais comuns em outros métodos,
+       
+        como comprimidos e injeções, garantindo maior estabilidade no tratamento.
+      </p>
+
+      <h3 className="flex items-center gap-2 justify-center lg:justify-start text-lg font-marcellus pb-2">
+        <RiNumber2 className="text-[#D3AF37]" />
+        Praticidade
+      </h3>
+      <p className="font-manrope pb-4 text-sm">
+        Não exigem administração diária, eliminando o risco de esquecimentos, típico de comprimidos e géis transdérmicos.
+      </p>
+
+      <h3 className="flex items-center gap-2 justify-center lg:justify-start text-lg font-marcellus pb-2">
+        <RiNumber3 className="text-[#D3AF37]" />
+        Maior Durabilidade
+      </h3>
+      <p className="font-manrope pb-4 text-sm">
+        Implantes absorvíveis liberam hormônios por até 6 meses, enquanto os não absorvíveis podem durar até 12 meses,
+        <br />
+        reduzindo a necessidade de reposições frequentes.
+      </p>
+
+      <h3 className="flex items-center gap-2 justify-center lg:justify-start text-lg font-marcellus pb-2">
+        <RiNumber4 className="text-[#D3AF37]" />
+        Conforto
+      </h3>
+      <p className="font-manrope pb-4 text-sm">
+        Evitam o desconforto de injeções intramusculares regulares, tornando o método mais prático e confortável para o paciente.
+      </p>
+
+      <h3 className="flex items-center gap-2 justify-center lg:justify-start text-lg font-marcellus pb-2">
+        <RiNumber5 className="text-[#D3AF37]" />
+        Melhor Resposta Terapêutica
+      </h3>
+      <p className="font-manrope pb-4 text-sm">
+        A liberação constante de hormônios bioidênticos, semelhantes aos produzidos naturalmente pelo organismo,
+        reduz os efeitos colaterais indesejados e promove maior eficácia terapêutica.
+      </p>
+
+      <h3 className="flex items-center gap-2 justify-center lg:justify-start text-lg font-marcellus pb-2">
+        <RiNumber6 className="text-[#D3AF37]" />
+        Discrição
+      </h3>
+      <p className="font-manrope pb-4 text-sm">
+        Inseridos sob a pele, os implantes são praticamente imperceptíveis, permitindo que o tratamento seja realizado sem interferir na rotina do paciente.
+      </p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+        </div>
+       <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z" fill="#B58E4F"/>
+</svg>
+
+
+
+        <div className="text-center ">
+            <h2 className="font-manrope  lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">
+                O QUE OS IMPLANTES PODEM TRATAR
             </h2>
             <h2 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">
                 Benefícios clínicos e práticos
             </h2>
-            <p className="font-manrope pb-6 lg:pb-8 text-gray-500 text-xs lg:text-sm max-w-2xl mx-auto px-4">
+            <p className="font-manrope lg:pb-8 text-gray-500 text-xs lg:text-sm max-w-2xl mx-auto px-4">
                 Nossos tratamentos visam estabilizar hormônios, reduzir sintomas da
                 menopausa, regular ciclos, melhorar libido, sono, humor e
                 desempenho físico, além de oferecer opções contraceptivas e suporte na
@@ -241,7 +305,7 @@ return (
             </p>
         </div>
 
-        <div className="px-4 pb-16 relative">
+        <div className="px-4 pb-16 relative pt-8">
             <Swiper
                 modules={[Navigation]}
                 spaceBetween={1}
@@ -313,8 +377,9 @@ return (
                 }
             `}
         </style>
+        <Agendar />
         <WhatsAppButton />
-        <Footer />
+       
     </div>
 );
 }

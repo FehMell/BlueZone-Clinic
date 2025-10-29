@@ -254,7 +254,7 @@ function ReposicaoHormonal() {
         `}
       </style>
       <WhatsAppButton />
-      <Footer />
+      
     </div>
   );
 }

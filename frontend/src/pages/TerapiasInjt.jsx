@@ -13,9 +13,9 @@ import { FaDumbbell, FaSyringe } from "react-icons/fa";
 import { FaHandSparkles } from "react-icons/fa";
 import { LiaFileMedicalAltSolid } from "react-icons/lia";
 import { GiPill } from "react-icons/gi";
-import { MdOutlineNoFood } from "react-icons/md";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import WhatsAppButton from "../components/whatsappButton";
+import Agendar from "../components/agendar"
 
 function TerapiasInjt() {
   const prevRef = useRef(null);
@@ -274,8 +274,9 @@ const services = [
                 }
             `}
       </style>
+      <Agendar />
       <WhatsAppButton />
-      <Footer />
+    
     </div>
   );
 }

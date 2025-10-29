@@ -8,6 +8,8 @@ import Menopausa from "./pages/Menopausa";
 import ReposicaoHormonal from "./pages/ReposicaoHormonal";
 import Implantes from "./pages/Implantes";
 import TerapiasInjt from "./pages/TerapiasInjt";
+import Sobre from "./pages/Sobre";
+import Footer from "./components/footer"
 
 function App() {
   return (
@@ -25,9 +27,12 @@ function App() {
         <Route path="/reposicao-hormonal-masculina" element={<ReposicaoHormonal />} />
         <Route path="/implantes-hormonais" element={<Implantes />} />
         <Route path="/terapias-injetaveis" element={<TerapiasInjt />} />
+        <Route path="/sobre" element={<Sobre />} />
 
 
       </Routes>
+      
+      < Footer/>
     </Router>
   );
 }

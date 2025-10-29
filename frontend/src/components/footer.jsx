@@ -19,8 +19,8 @@ function Footer() {
             <p className="font-manrope text-xs">Jardim Paulista, São Paulo – SP.</p>
             
             <h3 className="text-xl font-marcellus py-4 text-[#D3AF37] font-semibold">Horário de Funcionamento:</h3>
-            <p className="font-manrope text-xs">Segunda à Sexta: 08h00 às 20h00.</p>
-            <p className="font-manrope text-xs">Sábado: 09h00 às 17h00.</p>
+            <p className="font-manrope text-xs">Segunda à Sexta: 08h00 às 18h00.</p>
+            <p className="font-manrope text-xs">Sábado: 09h00 às 13h00.</p>
           </div>
 
           

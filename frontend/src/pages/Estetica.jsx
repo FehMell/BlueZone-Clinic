@@ -23,6 +23,8 @@ import Resultado3 from "../images/resultado3.webp";
 import Resultado4 from "../images/resultado4.webp";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
+
+
 function Estetica() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -164,7 +166,7 @@ function Estetica() {
             <div className="absolute left-[5%] w-[90%] h-full bg-gradient-to-r from-transparent via-white/80 to-transparent animate-reflexoLocal"></div>
           </div>
           
-          {/* wrapper ensures the PNG stays fully inside the background and doesn't overflow */}
+        
           <div className="absolute inset-0 z-30 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-16">
             <img 
               src={Thiago} 
@@ -182,6 +184,7 @@ function Estetica() {
 
      
       <div className="py-8 lg:py-10 px-4 lg:px-6 bg-white" id="tratamentos">
+        
         <div className="text-center max-w-7xl mx-auto">
           <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">TRATAMENTOS DE ESTÉTICA ENCONTRADOS</h2>
           <h3 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">NA BLUE ZONE CLINIC</h3>
@@ -266,7 +269,7 @@ function Estetica() {
         <h2 className="font-marcellus font-semibold  lg:pb-8 text-xl lg:text-3xl text-[#D3AF37] text-center ">
           RESULTADOS COMPROVADOS
         </h2>
-        <div className="flex flex-wrap justify-center gap-4 bg-transparent pt-10">
+        <div className="flex flex-wrap justify-center gap-4 bg-transparent pt-10 pb-12">
          
             <img src={Resultado1} alt="Resultado Toxina Botulínica" className="w-full max-w-[280px] h-auto object-cover cursor-pointer rounded-lg border-none outline-none shadow-none bg-transparent" />
             <img src={Resultado2} alt="Resultado Preenchimento Labial" className="w-full max-w-[280px] h-auto object-cover cursor-pointer rounded-lg border-none outline-none shadow-none bg-transparent" />
@@ -276,7 +279,7 @@ function Estetica() {
         </div>
       </div>
 
-      <Footer />
+      
       <WhatsAppButton />
       
       <style>
@@ -300,6 +303,7 @@ function Estetica() {
           }
         `}
       </style>
+    
     </div>
   );
 }

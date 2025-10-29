@@ -16,6 +16,7 @@ import 'swiper/css/navigation';
 import ServiceCard from "../components/serviceCard";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import WhatsAppButton from "../components/whatsappButton";
+import Agendar from "../components/agendar"
 
 function Emagrecimento() {
   const prevRef = useRef(null);
@@ -27,7 +28,7 @@ function Emagrecimento() {
   const services = [
     {
       title: "Avaliação Médica",
-      description: "A investigação é conduzida por meio de uma consulta médica minuciosa, complementada por exames laboratoriais, com o objetivo de identificar as possíveis causas do ganho de peso e direcionar o tratamento mais eficaz.",
+      description: "A avaliação é conduzida por meio de uma consulta médica minuciosa, complementada por exames laboratoriais, com o objetivo de identificar as possíveis causas do ganho de peso e direcionar o tratamento mais eficaz.",
       icon: LiaFileMedicalAltSolid,
       showButton: false,
     },
@@ -148,28 +149,26 @@ function Emagrecimento() {
           </div>
         </div>
 
-        <div className="hidden lg:block relative order-1 lg:order-2 h-96 lg:h-auto overflow-hidden">
+        <div className="hidden lg:block relative order-1 lg:order-2 h-96 lg:h-auto overflow-visible">
           <div
-            className="w-full h-full bg-cover bg-center relative z-10"
+            className="w-full h-full bg-cover bg-center"
             style={{ backgroundImage: `url(${Local})` }}
           ></div>
           <div className="absolute inset-0 overflow-hidden z-20 pointer-events-none">
             <div className="absolute left-[5%] w-[90%] h-full bg-gradient-to-r from-transparent via-white/80 to-transparent animate-reflexoLocal"></div>
           </div>
-          
-          {/* wrapper ensures the PNG stays fully inside the background and doesn't overflow */}
-          <div className="absolute inset-0 z-30 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-16">
-            <img
-              src={Thiago}
-              alt="Dr. Thiago"
-              className="
-                object-contain max-w-full max-h-full
-                w-auto h-auto lg:w-[50%] xl:w-[55%] 2xl:w-[50%]
-                transition-transform duration-1000 ease-in-out hover:-translate-y-1
-                z-30
-              "
-            />
-          </div>
+            <div className="absolute inset-0 z-30 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-16">
+                     <img 
+                       src={Thiago} 
+                       alt="Dr. Thiago" 
+                       className="
+                         object-contain max-w-full max-h-full
+                         w-auto h-auto lg:w-[50%] xl:w-[55%] 2xl:w-[50%]
+                         transition-transform duration-1000 ease-in-out hover:-translate-y-1
+                         z-30
+                       "
+                     />
+                   </div>
         </div>
       </div>
 
@@ -493,9 +492,11 @@ function Emagrecimento() {
         `}
       </style>
 
+      <Agendar />
+
       <WhatsAppButton />
 
-      <Footer />
+
     </div>
   );
 }

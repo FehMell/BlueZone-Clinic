@@ -39,15 +39,9 @@ function Menu() {
         <ul className="flex gap-8 text-black items-center">
           <a href="/"><li className="hover:text-gray-800 cursor-pointer">Início</li></a>
 
-          <Link 
-            to="sobre"       
-            smooth={true}   
-            duration={500}   
-            offset={-50}     
-            className="cursor-pointer"
-          >
-            <li className="hover:text-gray-800 cursor-pointer">Sobre</li>
-          </Link>
+          
+            <a href="/sobre"><li className="hover:text-gray-800 cursor-pointer">Sobre</li></a>
+          
 
          
           <li
@@ -76,8 +70,8 @@ function Menu() {
                 <a href="/hipertrofia"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Hipertrofia</li></a>
                 <a href="/menopausa"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Menopausa</li></a>
                 <a href="/reposicao-hormonal-masculina"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Reposição Hormonal Masculina</li></a>
-                <li className="px-4 py-1 hover:text-white hover:bg-gray-800">Terapia Injetáveis</li>
-                <li className="px-4 py-1 hover:text-white hover:bg-gray-800">Implantes Hormonais</li>
+                <a href="/terapias-injetaveis"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Terapia Injetáveis</li></a>
+                <a href="/implantes-hormonais"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Implantes Hormonais</li></a>
               </ul>
             )}
           </li>

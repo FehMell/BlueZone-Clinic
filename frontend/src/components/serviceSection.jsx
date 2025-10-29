@@ -99,7 +99,10 @@ function ServicesSection() {
   }, [swiperInstance]);
 
   return (
+    
     <div className="py-8 lg:py-10 px-4 lg:px-6 bg-neutral-100" id="tratamentos">
+      
+      
       <div className="text-center max-w-7xl mx-auto">
         <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">TRATAMENTOS ENCONTRADOS</h2>
         <h3 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">NA BLUE ZONE CLINIC</h3>
@@ -181,13 +184,7 @@ function ServicesSection() {
         }
       `}</style>
 
-      <div className="text-center pt-12 lg:pt-20">
-        <a href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20oferecidos%20pela%20Blue%20Zone." target='_blank' rel="noopener noreferrer">
-          <button className="bg-[#D3AF37] p-3 px-8 lg:px-10 rounded-lg font-semibold text-white transform transition-transform duration-300 hover:scale-105 lg:hover:scale-110 hover:bg-[#B38A4B] text-sm lg:text-base">
-            Agendar Consulta
-          </button>
-        </a>
-      </div>
+    
     </div>
   );
 }

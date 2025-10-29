@@ -264,7 +264,7 @@ function Menopausa() {
         `}
       </style>
       <WhatsAppButton />
-      <Footer />
+     
     </div>
   );
 }
