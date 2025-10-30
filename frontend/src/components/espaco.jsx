@@ -14,15 +14,18 @@ function Espaco() {
 
   return (
     <div className="relative w-full bg-white flex flex-col items-center justify-start pt-12 pb-16">
-      <div className="w-full overflow-hidden">
-        <div className="flex flex-wrap md:flex-nowrap">
+      <div className="w-full">
+        <div className="flex gap-1 justify-center">
           {images.map((img, index) => (
-            <img
-              key={index}
-              src={img.src}
-              alt={`Espaço ${index + 1}`}
-              className="object-cover h-80 flex-1 w-full md:w-auto"
-            />
+            <div key={index} className="flex-shrink-0 w-64 h-80 relative">
+              <div className="w-full h-full overflow-hidden flex items-start justify-center">
+                <img
+                  src={img.src}
+                  alt={`Espaço ${index + 1}`}
+                  className="min-w-full min-h-full object-cover"
+                />
+              </div>
+            </div>
           ))}
         </div>
       </div>

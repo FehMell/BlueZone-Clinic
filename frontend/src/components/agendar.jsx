@@ -21,7 +21,9 @@ function Agendar() {
     </button>
   </div>
 </a>
-<p className="uppercase text-xs pt-6 text-gray-500 font-manrope">Atendimento em <span className="text-[#D3AF37] font-semibold">São Paulo </span></p>
+<p className="uppercase text-xs pt-6 text-gray-500 font-manrope">
+  Atendimento em <span className="text-[#D3AF37] font-semibold">São Paulo</span> e também via <span className="text-[#D3AF37] font-semibold">Teleconsulta</span>
+</p>
 
 
       </div>

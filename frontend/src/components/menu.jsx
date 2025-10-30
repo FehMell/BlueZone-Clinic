@@ -44,37 +44,26 @@ function Menu() {
           
 
          
-          <li
-            className="relative flex items-center cursor-pointer"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          > 
-          
-          
-              Tratamentos
-            
+         <li
+  className="relative cursor-pointer flex items-center justify-center"
+  onMouseEnter={handleMouseEnter}
+  onMouseLeave={handleMouseLeave}
+>
+  <span>Tratamentos</span>
+  
 
-          
-            <RiArrowDropUpFill
-              className={`h-6 w-6 transform transition-transform duration-300 ml-1 ${
-                open ? "rotate-180" : ""
-              }`}
-              onClick={toggleDropdown}
-            />
-
-          
-            {open && (
-              <ul className="absolute top-full left-0 mt-1 text-black shadow-lg py-2 px-1 w-48 max-h-80 overflow-y-auto bg-white z-50 font-manrope text-xs">
-               <a href="/emagrecimento"> <li className="px-4 py-1 hover:text-white hover:bg-gray-800">Emagrecimento Saudável</li></a>
-               <a href="/estetica"> <li className="px-4 py-1 hover:text-white hover:bg-gray-800">Estética</li> </a>
-                <a href="/hipertrofia"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Hipertrofia</li></a>
-                <a href="/menopausa"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Menopausa</li></a>
-                <a href="/reposicao-hormonal-masculina"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Reposição Hormonal Masculina</li></a>
-                <a href="/terapias-injetaveis"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Terapia Injetáveis</li></a>
-                <a href="/implantes-hormonais"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Implantes Hormonais</li></a>
-              </ul>
-            )}
-          </li>
+  {open && (
+    <ul className="absolute top-full left-0 mt-1 text-black shadow-lg py-2 px-1 w-48 max-h-80 overflow-y-auto bg-white z-50 font-manrope text-xs">
+      <a href="/emagrecimento"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Emagrecimento Saudável</li></a>
+      <a href="/estetica"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Estética</li></a>
+      <a href="/hipertrofia"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Hipertrofia</li></a>
+      <a href="/menopausa"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Menopausa</li></a>
+      <a href="/reposicao-hormonal-masculina"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Reposição Hormonal Masculina</li></a>
+      <a href="/terapias-injetaveis"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Terapia Injetáveis</li></a>
+      <a href="/implantes-hormonais"><li className="px-4 py-1 hover:text-white hover:bg-gray-800">Implantes Hormonais</li></a>
+    </ul>
+  )}
+</li>
 
           <li className="hover:text-gray-800 cursor-pointer">Contato</li>
         </ul>

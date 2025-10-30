@@ -16,7 +16,7 @@ import 'swiper/css/navigation';
 import ServiceCard from "../components/serviceCard";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import WhatsAppButton from "../components/whatsappButton";
-import Agendar from "../components/agendar"
+
 
 function Emagrecimento() {
   const prevRef = useRef(null);
@@ -339,7 +339,7 @@ function Emagrecimento() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center gap-1 lg:gap-1 mt-2 lg:ml-6 text-xs font-semibold font-manrope text-gray-700 text-center lg:text-left">
+      <div className="flex flex-col lg:flex-row items-center gap-1 lg:gap-1 mt-2 lg:ml-6 text-sm font-semibold font-manrope text-gray-700 text-center lg:text-left">
         <p>13,3 kg perdidos em 2 meses</p>
         <p>+1,4 kg de músculo</p>
         <p>-8,7% de gordura corporal</p>
@@ -367,7 +367,7 @@ function Emagrecimento() {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center gap-1 lg:gap-1 mt-2 lg:mr-8 text-xs font-semibold font-manrope text-gray-700 text-center lg:text-right">
+      <div className=" flex flex-col lg:flex-row items-center text-sm gap-1 lg:gap-1 mt-2 lg:mr-8  font-semibold font-manrope text-gray-700 text-center lg:text-right">
         <p>12,8 kg perdidos em 2 meses</p>
         <p>+1,2 kg de músculo</p>
         <p>-7,9% de gordura corporal</p>
@@ -386,7 +386,7 @@ function Emagrecimento() {
       <h3 className="absolute top-4 lg:top-20 left-1/2 lg:left-36 -translate-x-1/2 lg:-translate-x-1/2 text-black font-semibold font-marcellus text-xs lg:text-base uppercase text-center lg:text-left w-full lg:w-auto">
         paciente em uso de semaglutida
       </h3>
-      <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-2 pt-4 lg:pt-4 font-semibold text-xs lg:ml-12 text-gray-700 text-center lg:text-left">
+      <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-2 pt-4 lg:pt-4 font-semibold text-sm lg:ml-12 text-gray-700 text-center lg:text-left">
         <p>10,6 kg perdidos em 3 meses</p>
         <p>+0,3 kg de músculo</p>
         <p>-8% de gordura corporal</p>
@@ -492,7 +492,7 @@ function Emagrecimento() {
         `}
       </style>
 
-      <Agendar />
+     
 
       <WhatsAppButton />
 

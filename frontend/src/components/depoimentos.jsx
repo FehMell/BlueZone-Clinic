@@ -24,10 +24,8 @@ function Depoimentos() {
 
   return (
     <div>
-       <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-  <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z" fill="#B58E4F"/>
-</svg>
-      <h2 className="font-marcellus text-center pb-6 pt-4 text-3xl font-semibold text-[#D3AF37]">
+       
+      <h2 className="font-marcellus text-center pb-6 pt-12 text-3xl font-semibold text-[#D3AF37]">
         O QUE DIZEM NOSSOS PACIENTES
       </h2>
       <p className="font-manrope text-center text-gray-500 text-sm mb-10">

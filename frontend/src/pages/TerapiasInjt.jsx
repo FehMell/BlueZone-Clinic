@@ -15,7 +15,7 @@ import { LiaFileMedicalAltSolid } from "react-icons/lia";
 import { GiPill } from "react-icons/gi";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import WhatsAppButton from "../components/whatsappButton";
-import Agendar from "../components/agendar"
+
 
 function TerapiasInjt() {
   const prevRef = useRef(null);
@@ -274,7 +274,7 @@ const services = [
                 }
             `}
       </style>
-      <Agendar />
+     
       <WhatsAppButton />
     
     </div>
