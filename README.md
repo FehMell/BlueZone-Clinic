@@ -5,25 +5,43 @@ O site original apresentava **problemas de layout quebrado** e **informações c
 
 ---
 
-### 🎨 Design
+###  Design
 Desenvolvido por [Liv-Inn](https://github.com/liv-inn)
 
 Desenvolvida por [FehMell](https://github.com/FehMell)
 
 
-### 💻 Programação Front-End
+###  Programação Front-End
 Desenvolvida por [FehMell](https://github.com/FehMell)
 
 ---
 
-### ⚙️ Tecnologias utilizadas
-- React  
-- TailwindCSS  
+###  Objetivo
+Melhorar a experiência do usuário (UX) e a organização visual, trazendo um design mais harmônico e uma navegação fluida.
 
 ---
 
-### 🧠 Objetivo
-Melhorar a experiência do usuário (UX) e a organização visual, trazendo um design mais harmônico e uma navegação fluida.
+##  Design e Layout
+- Menu reformulado: “Soluções” → **“Tratamentos”**; “Protocolo” removido.  
+- Paleta de cores atualizada, design mais **limpo e harmônico**.  
+- Textos repetidos foram **encurtados e padronizados**.  
+
+---
+
+##  Funcionalidades Front-End
+- Cards de tratamentos e fotos do espaço agora em **carrossel**.  
+- Depoimentos puxados automaticamente do **Google via API**.  
+- Fotos do Dr. Thiago **padronizadas** em todas as páginas.  
+- Footer atualizado: horários corretos.
+
+---
+
+##  Melhorias de Conteúdo
+- Avaliações do Doctoralia padronizadas: “Confira mais de 300 avaliações positivas 5 estrelas”.  
+- Criada nova página **“Sobre”** com:  
+  - texto antigo de longevidade saudável  
+  - explicação da consulta  
+  - sessão “Resultados Comprovados” com imagens e vídeo.
 
 ---
 
