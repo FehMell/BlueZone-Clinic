@@ -17,7 +17,7 @@ import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import WhatsAppButton from "../components/whatsappButton";
 import { RiNumber1, RiNumber2, RiNumber3, RiNumber4, RiNumber5, RiNumber6   } from "react-icons/ri";
 import ImplanteHormonal from "../images/ImplanteHormonal.png"
-import Agendar from "../components/agendar"
+
 
 function Implantes() {
   const prevRef = useRef(null);
@@ -377,7 +377,7 @@ return (
                 }
             `}
         </style>
-        <Agendar />
+       
         <WhatsAppButton />
        
     </div>

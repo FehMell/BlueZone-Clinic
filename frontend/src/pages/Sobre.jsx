@@ -191,7 +191,7 @@ function Sobre() {
      <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
   <path d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z" fill="#B58E4F"/>
 </svg>
-   <h2 className="font-marcellus font-semibold  lg:pb-8 text-xl lg:text-3xl text-[#463D34] text-center uppercase pt-2">Resultados Comprovados</h2>
+   <h2 className="font-marcellus font-semibold  lg:pb-8 text-xl lg:text-3xl text-[#D3AF37] text-center uppercase pt-2">Resultados Comprovados</h2>
 <div className="flex flex-wrap justify-center gap-10 pb-24 pt-12">
   <div className="flex flex-col items-center text-center w-[350px]">
     <img

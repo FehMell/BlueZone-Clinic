@@ -86,6 +86,9 @@ function Estetica() {
     }
   }, [swiperInstance]);
 
+  const [imagemSelecionada, setImagemSelecionada] = useState(null);
+
+
   return (
     <div>
     
@@ -264,20 +267,41 @@ function Estetica() {
         `}</style>
       </div>
 
-     
-      <div className="bg-white py-8 lg:py-12">
-        <h2 className="font-marcellus font-semibold  lg:pb-8 text-xl lg:text-3xl text-[#D3AF37] text-center ">
-          RESULTADOS COMPROVADOS
-        </h2>
-        <div className="flex flex-wrap justify-center gap-4 bg-transparent pt-10 pb-12">
-         
-            <img src={Resultado1} alt="Resultado Toxina Botulínica" className="w-full max-w-[280px] h-auto object-cover cursor-pointer rounded-lg border-none outline-none shadow-none bg-transparent" />
-            <img src={Resultado2} alt="Resultado Preenchimento Labial" className="w-full max-w-[280px] h-auto object-cover cursor-pointer rounded-lg border-none outline-none shadow-none bg-transparent" />
-            <img src={Resultado3} alt="Aplicação de Botox" className="w-full max-w-[280px] h-auto object-cover cursor-pointer rounded-lg border-none outline-none shadow-none bg-transparent" />
-            <img src={Resultado4} alt="Aplicação de Botox" className="w-full max-w-[280px] h-auto object-cover cursor-pointer rounded-lg border-none outline-none shadow-none bg-transparent" />
-         
-        </div>
-      </div>
+      
+<div className="bg-white py-8 lg:py-12">
+  <h2 className="font-marcellus font-semibold lg:pb-8 text-xl lg:text-3xl text-[#D3AF37] text-center">
+    RESULTADOS COMPROVADOS
+  </h2>
+
+ 
+  <div className="flex flex-wrap justify-center gap-4 bg-transparent pt-10 pb-12">
+    {[Resultado1, Resultado2, Resultado3, Resultado4].map((img, i) => (
+      <img
+        key={i}
+        src={img}
+        alt={`Resultado ${i + 1}`}
+        className="w-full max-w-[280px] h-auto object-cover cursor-pointer rounded-lg hover:opacity-90 transition"
+        onClick={() => setImagemSelecionada(img)}
+      />
+    ))}
+  </div>
+
+ 
+  {imagemSelecionada && (
+    <div
+      className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+      onClick={() => setImagemSelecionada(null)}
+    >
+      <img
+        src={imagemSelecionada}
+        alt="Imagem ampliada"
+        className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+      />
+    </div>
+  )}
+</div>
+
+   
 
       
       <WhatsAppButton />

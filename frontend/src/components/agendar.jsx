@@ -1,6 +1,6 @@
 function Agendar() {
   return (
-    <div className="text-center">
+    <div className="text-center pt-12 ">
       <h2 className="uppercase pb-6 font-marcellus text-3xl font-semibold text-[#D3AF37]">Agende sua Consulta</h2>
       <p className="pb-8 font-manrope text-gray-700 text-sm">
         {" "}
