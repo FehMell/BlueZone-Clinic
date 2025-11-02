@@ -31,22 +31,22 @@ function Menu() {
   };
 
   return (
-    <div className="flex items-center justify-between bg-white px-4 sm:px-6 h-16 shadow-md relative">
+    <div className="flex items-center justify-between bg-white px-2 sm:px-4 lg:px-6 h-16 shadow-md relative">
       
      
-      <div className="px-4 sm:px-32">
+      <div className="px-2 sm:px-4 lg:px-32">
         <a href="/" onClick={closeMobileMenu}>
           <img
             src="https://bluezoneclinic.com.br/wp-content/uploads/2024/12/Bluezone-logo-2.svg"
             alt="Logo Bluezone"
-            className="w-20 h-20 sm:w-24 sm:h-24"
+            className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
           />
         </a>
       </div>
 
      
-      <div className="hidden md:flex justify-end pr-20">
-        <ul className="flex gap-8 text-black items-center">
+      <div className="hidden md:flex justify-end pr-4 lg:pr-20">
+        <ul className="flex gap-4 lg:gap-8 text-black items-center text-sm lg:text-base">
           <a href="/"><li className="hover:text-gray-800 cursor-pointer">Início</li></a>
           <a href="/sobre"><li className="hover:text-gray-800 cursor-pointer">Sobre</li></a>
          
@@ -69,7 +69,6 @@ function Menu() {
               </ul>
             )}
           </li>
-
           <a href="/contato"><li className="hover:text-gray-800 cursor-pointer">Contato</li></a>
         </ul>
       </div>
@@ -132,9 +131,7 @@ function Menu() {
               )}
             </li>
 
-            <a href="/contato" onClick={closeMobileMenu}>
-              <li className="px-6 py-3 hover:bg-gray-100">Contato</li>
-            </a>
+   
           </ul>
         </div>
       )}

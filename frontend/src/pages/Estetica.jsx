@@ -101,7 +101,7 @@ function Estetica() {
 
           <div className="lg:absolute lg:inset-0 lg:bg-white/80 lg:backdrop-blur-sm lg:z-10"></div>
 
-          <div className="relative z-20 flex flex-col items-center text-center max-w-[700px] overflow-hidden">
+          <div className="relative z-20 flex flex-col items-center text-center max-w-[700px] px-4">
             <div className="lg:absolute lg:inset-0 lg:z-30 pointer-events-none animate-[reflexo_6s_linear_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
 
             <style>
@@ -146,15 +146,17 @@ function Estetica() {
               Nosso compromisso é garantir que você se sinta mais confiante e satisfeito com sua aparência. Contamos com uma equipe de profissionais qualificados, dedicada a oferecer um cuidado integral que une tratamentos para hipertrofia e emagrecimento com procedimentos estéticos avançados. Nosso objetivo é proporcionar um atendimento completo que harmonize saúde e estética, elevando sua autoestima!
             </p>
             
-            <div className="border-2 border-[#D3AF37] px-1 py-1 hover:scale-110 transform transition-transform duration-300 mb-4">
-              <a 
-                href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20oferecidos%20pela%20Blue%20Zone." 
-                target="_blank"
-              >
-                <button className="font-marcellus bg-[#D3AF37] text-white px-6 lg:px-7 font-semibold py-2 lg:py-2 hover:bg-[#B38A4B] text-sm lg:text-base">
-                  Agendar Consulta
-                </button>
-              </a>
+            <div className="w-full flex justify-center">
+              <div className="border-2 border-[#D3AF37] px-1 py-1 hover:scale-110 transform transition-transform duration-300 mb-4">
+                <a 
+                  href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20oferecidos%20pela%20Blue%20Zone." 
+                  target="_blank"
+                >
+                  <button className="font-marcellus bg-[#D3AF37] text-white px-6 lg:px-7 font-semibold py-2 lg:py-2 hover:bg-[#B38A4B] text-sm lg:text-base">
+                    Agendar Consulta
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>

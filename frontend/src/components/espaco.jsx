@@ -10,10 +10,41 @@ function Espaco() {
     { src: "https://bluezoneclinic.com.br/wp-content/uploads/2024/08/bz7.webp" },
   ];
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [imageLoading, setImageLoading] = useState(false);
+
+  const openImage = (index) => {
+    setSelectedImageIndex(index);
+  };
+
+  const closeImage = () => {
+    setSelectedImageIndex(null);
+    setImageLoading(false);
+  };
+
+  const nextImage = () => {
+    setImageLoading(true);
+    setTimeout(() => {
+      setSelectedImageIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+      setImageLoading(false);
+    }, 150);
+  };
+
+  const prevImage = () => {
+    setImageLoading(true);
+    setTimeout(() => {
+      setSelectedImageIndex((prevIndex) => 
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      );
+      setImageLoading(false);
+    }, 150);
+  };
 
   return (
     <section className="relative w-full bg-white flex flex-col items-center justify-start py-16 px-4">
+      
     
       <div className="max-w-6xl w-full text-center mb-10">
         <h2 className="text-3xl font-semibold text-[#D3AF37] mb-2 font-marcellus pb-2 uppercase">
@@ -31,7 +62,7 @@ function Espaco() {
           <div
             key={index}
             className="relative w-full h-64 overflow-hidden cursor-pointer group"
-            onClick={() => setSelectedImage(img.src)}
+            onClick={() => openImage(index)}
           >
             <img
               src={img.src}
@@ -46,26 +77,62 @@ function Espaco() {
         ))}
       </div>
 
-     
-      {selectedImage && (
+      {/* Modal com navegação */}
+      {selectedImageIndex !== null && (
         <div
-          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={closeImage}
         >
-          <div className="relative">
+          <div className="relative max-w-[90vw] max-h-[80vh]">
+            {/* Imagem */}
             <img
-              src={selectedImage}
-              alt="Imagem ampliada"
-              className="max-w-[90vw] max-h-[80vh] shadow-lg rounded-lg"
+              src={images[selectedImageIndex].src}
+              alt={`Espaço ${selectedImageIndex + 1}`}
+              className={`max-w-full max-h-full shadow-lg rounded-lg transition-opacity duration-300 ${imageLoading ? 'opacity-50' : 'opacity-100'}`}
+              onClick={(e) => e.stopPropagation()}
             />
+            
+            {/* Botão fechar */}
             <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-2 bg-white p-1 rounded-full shadow"
+              onClick={closeImage}
+              className="absolute top-2 right-2 bg-white/90 hover:bg-white text-black p-2 rounded-full shadow-lg transition-all duration-200 w-10 h-10 flex items-center justify-center text-xl font-bold"
             >
               ✕
             </button>
+            
+            {/* Seta anterior */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
+              disabled={imageLoading}
+              className={`absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-black p-3 rounded-full shadow-lg transition-all duration-200 w-12 h-12 flex items-center justify-center text-xl font-bold ${imageLoading ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110'}`}
+            >
+              ‹
+            </button>
+            
+            {/* Seta próxima */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
+              disabled={imageLoading}
+              className={`absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-black p-3 rounded-full shadow-lg transition-all duration-200 w-12 h-12 flex items-center justify-center text-xl font-bold ${imageLoading ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110'}`}
+            >
+              ›
+            </button>
+            
+            {/* Indicador de posição */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+              {selectedImageIndex + 1} / {images.length}
+            </div>
+            
           </div>
         </div>
+
+        
       )}
     </section>
   );

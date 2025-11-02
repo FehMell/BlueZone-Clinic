@@ -151,7 +151,7 @@ function Sobre() {
     </div>
 
    
-    <div className="lg:w-2/5 w-full flex flex-col gap-4 text-justify"> 
+    <div className="lg:w-2/5 w-full flex flex-col gap-4 text-justify p-4"> 
     
       <h3 className="text-lg font-semibold flex items-center gap-2 font-marcellus text-gray-700"> <RiNumber1 className="text-[#D3AF37]" />Realização de Exames Laboratoriais antes da consulta</h3>
       <p className="font-manrope text-sm text-gray-800">

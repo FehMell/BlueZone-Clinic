@@ -28,8 +28,6 @@ function App() {
         <Route path="/implantes-hormonais" element={<Implantes />} />
         <Route path="/terapias-injetaveis" element={<TerapiasInjt />} />
         <Route path="/sobre" element={<Sobre />} />
-
-
       </Routes>
       
       < Footer/>
