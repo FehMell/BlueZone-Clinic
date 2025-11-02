@@ -69,7 +69,6 @@ function Menu() {
               </ul>
             )}
           </li>
-          <a href="/contato"><li className="hover:text-gray-800 cursor-pointer">Contato</li></a>
         </ul>
       </div>
 
