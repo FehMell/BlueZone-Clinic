@@ -21,7 +21,7 @@ function PerguntasFrequentes() {
                             <h3 className="font-marcellus text-xl font-semibold text-[#463D34] mb-3">
                                 Como agendar uma consulta?
                             </h3>
-                            <p className="font-manrope text-gray-600 text-sm leading-relaxed">
+                            <p className="font-manrope text-gray-600 text-sm leading-relaxed text-justify">
                                 Você pode agendar através do nosso WhatsApp, e responderemos o mais breve possível para confirmar sua consulta.
                             </p>
                         </div>
@@ -37,11 +37,11 @@ function PerguntasFrequentes() {
 
                         <div className="bg-white p-6 rounded-sm shadow-sm">
                             <h3 className="font-marcellus text-xl font-semibold text-[#463D34] mb-3">
-                                Preciso de encaminhamento médico?
+                                Atende plano de saúde?
                             </h3>
-                            <p className="font-manrope text-gray-600 text-sm leading-relaxed">
-                                Não é necessário encaminhamento. Nossos profissionais estão aptos a realizar 
-                                a consulta inicial e solicitar exames quando necessário.
+                            <p className="font-manrope text-gray-600 text-sm leading-relaxed text-justify">
+                                Nosso atendimento na <span className="font-semibold"> Blue Zone Clinic </span> é exclusivamente <span className="font-semibold"> particular. </span>
+Oferecemos até duas notas fiscais por paciente, referentes as consultas médica e da nutricionista, para que possa solicitar reembolso junto ao seu convênio.
                             </p>
                         </div>
 

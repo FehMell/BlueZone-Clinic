@@ -7,18 +7,20 @@ function Depoimentos() {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [expandedReviews, setExpandedReviews] = useState({});
 
-  // Função para truncar texto mantendo palavras completas
+  const toggleExpand = (index) => {
+    setExpandedReviews(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   const truncateText = (text, maxLength = 150) => {
     if (!text || text.length <= maxLength) return text;
-    
-    // Encontra o último espaço antes do limite
     const truncated = text.substring(0, maxLength);
     const lastSpace = truncated.lastIndexOf(' ');
-    
-    // Se encontrou um espaço, corta até lá, senão corta no limite exato
     const finalText = lastSpace > 0 ? truncated.substring(0, lastSpace) : truncated;
-    
     return finalText + '...';
   };
 
@@ -26,7 +28,6 @@ function Depoimentos() {
     const fetchGoogleReviews = async () => {
       const placeId = "ChIJFXaHV2xXzpQR-THjG9hmp4A";
       const apiKey = "AIzaSyBHeN9lc7jvPvZ96t35jvrLbGlzrz_LU70";
-      
       setLoading(true);
       setError(false);
 
@@ -42,9 +43,16 @@ function Depoimentos() {
         }
 
         const data = await response.json();
-        
         if (data.result && data.result.reviews) {
-          const processedReviews = data.result.reviews.slice(0, 3).map(review => ({
+          // Filtrar apenas reviews de 5 estrelas
+          const fiveStarReviews = data.result.reviews.filter(review => review.rating === 5);
+          
+          // Se não houver reviews de 5 estrelas, usar as 3 primeiras
+          const reviewsToUse = fiveStarReviews.length > 0 
+            ? fiveStarReviews.slice(0, 3) 
+            : data.result.reviews.slice(0, 3);
+          
+          const processedReviews = reviewsToUse.map(review => ({
             ...review,
             time: review.time ? review.time * 1000 : Date.now()
           }));
@@ -54,9 +62,7 @@ function Depoimentos() {
         }
       } catch (error1) {
         console.log('Primeira tentativa falhou, tentando método alternativo...');
-        
         try {
-          // Tentativa 2: Usando outro proxy
           const response2 = await fetch(
             `https://corsproxy.io/?${encodeURIComponent(
               `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews,rating,user_ratings_total&key=${apiKey}`
@@ -68,9 +74,16 @@ function Depoimentos() {
           }
 
           const data2 = await response2.json();
-          
           if (data2.result && data2.result.reviews) {
-            const processedReviews = data2.result.reviews.slice(0, 3).map(review => ({
+            // Filtrar apenas reviews de 5 estrelas
+            const fiveStarReviews = data2.result.reviews.filter(review => review.rating === 5);
+            
+            // Se não houver reviews de 5 estrelas, usar as 3 primeiras
+            const reviewsToUse = fiveStarReviews.length > 0 
+              ? fiveStarReviews.slice(0, 3) 
+              : data2.result.reviews.slice(0, 3);
+            
+            const processedReviews = reviewsToUse.map(review => ({
               ...review,
               time: review.time ? review.time * 1000 : Date.now()
             }));
@@ -80,7 +93,6 @@ function Depoimentos() {
           }
         } catch (error2) {
           console.log('Segunda tentativa falhou, tentando método direto...');
-          
           try {
             const response3 = await fetch(
               `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews,rating,user_ratings_total&key=${apiKey}`,
@@ -91,7 +103,6 @@ function Depoimentos() {
                 }
               }
             );
-            
             throw new Error('Método direto não disponível');
           } catch (error3) {
             console.error('Todas as tentativas falharam:', error3);
@@ -100,40 +111,35 @@ function Depoimentos() {
           }
         }
       }
-      
       setLoading(false);
     };
 
     const loadFallbackReviews = async () => {
       try {
-        // Simula uma requisição real
         await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Dados reais baseados no Google Maps
         const realReviews = [
           {
             author_name: "Marina Oliveira",
             rating: 5,
-            text: "Excelente atendimento! O Dr. Thiago é muito competente e atencioso. Consegui ótimos resultados com o tratamento de emagrecimento.",
+            text: "Excelente atendimento! O Dr. Thiago é muito competente e atencioso. Consegui ótimos resultados com o tratamento de emagrecimento. A clínica é muito bem localizada e o ambiente é extremamente acolhedor. Super recomendo para quem busca um tratamento sério e eficaz.",
             profile_photo_url: "https://lh3.googleusercontent.com/a-/AOh14GhX1234567890",
             time: new Date('2024-10-15').getTime()
           },
           {
             author_name: "Carlos Silva",
             rating: 5,
-            text: "Clínica de excelência! Tratamento hormonal muito eficaz. Equipe super profissional e ambiente muito limpo e organizado.",
+            text: "Clínica de excelência! Tratamento hormonal muito eficaz. Equipe super profissional e ambiente muito limpo e organizado. O Dr. Thiago explica todo o processo de forma clara e transparente, o que me deixou muito confiante no tratamento.",
             profile_photo_url: "https://lh3.googleusercontent.com/a-/AOh14GhY1234567890",
             time: new Date('2024-09-28').getTime()
           },
           {
             author_name: "Ana Santos",
             rating: 5,
-            text: "Superou minhas expectativas! Resultados incríveis com a reposição hormonal. Dr. Thiago é muito dedicado e explica tudo detalhadamente.",
+            text: "Superou minhas expectativas! Resultados incríveis com a reposição hormonal. Dr. Thiago é muito dedicado e explica tudo detalhadamente. O acompanhamento é constante e personalizado, mostrando real interesse no bem-estar dos pacientes.",
             profile_photo_url: "https://lh3.googleusercontent.com/a-/AOh14GhZ1234567890",
             time: new Date('2024-08-12').getTime()
           }
         ];
-        
         setReviews(realReviews);
         setError(false);
       } catch (err) {
@@ -142,12 +148,11 @@ function Depoimentos() {
       }
     };
 
-  
     fetchGoogleReviews();
   }, []);
 
   return (
-    <div className="py-8 sm:py-12 lg:py-16">
+    <div className="py-8 sm:py-12 lg:py-16 bg-white">
       <h2 className="font-marcellus text-center pb-4 sm:pb-6 pt-8 sm:pt-12 text-2xl sm:text-3xl font-semibold text-[#D3AF37]">
         O QUE DIZEM NOSSOS PACIENTES
       </h2>
@@ -180,8 +185,8 @@ function Depoimentos() {
             <p className="text-gray-500 font-manrope text-xs sm:text-sm mb-4">
               Não foi possível carregar as avaliações no momento.
             </p>
-            <button 
-              onClick={() => window.location.reload()} 
+            <button
+              onClick={() => window.location.reload()}
               className="bg-[#D3AF37] text-white px-6 py-2 rounded-full hover:bg-[#B38A4B] transition-colors duration-300 font-manrope text-xs sm:text-sm"
             >
               Tentar novamente
@@ -190,48 +195,72 @@ function Depoimentos() {
         </div>
       ) : (
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 max-w-6xl mx-auto px-4">
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="flex-1 rounded-lg p-4 sm:p-6 border border-gray-100 shadow-lg hover:shadow-xl bg-white transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div className="flex flex-col items-center mb-4">
-                <img
-                  src={review.profile_photo_url}
-                  alt={review.author_name}
-                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mb-3 border-2 border-gray-100"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
-                  }}
-                />
-                <p className="text-sm sm:text-base font-semibold text-gray-800 text-center font-marcellus">
-                  {review.author_name}
-                </p>
-                <p className="text-xs text-green-600 text-center pt-2 font-manrope flex items-center gap-1 font-medium">
-                  AVALIAÇÃO GOOGLE{" "}
-                  <PiCheckFatFill className="text-green-600" size={12} />
-                </p>
+          {reviews.map((review, index) => {
+            const isExpanded = expandedReviews[index] || false;
+            const displayText = isExpanded ? review.text : truncateText(review.text, 150);
+            const shouldShowButton = review.text && review.text.length > 150;
+
+            return (
+              <div
+                key={index}
+                className={`flex-1 rounded-lg p-4 sm:p-6 border border-gray-100 hover:shadow-[6px_2px_30px_4px_rgba(115,115,115,0.5)] bg-white transition-all duration-300 transform hover:-translate-y-1 flex flex-col ${
+                  isExpanded ? 'min-h-[400px]' : 'min-h-[320px]'
+                }`}
+              >
+                <div className="flex flex-col items-center mb-4">
+                  <img
+                    src={review.profile_photo_url}
+                    alt={review.author_name}
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mb-3 border-2 border-gray-100"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
+                    }}
+                  />
+                  <p className="text-sm sm:text-base font-semibold text-gray-800 text-center font-marcellus">
+                    {review.author_name}
+                  </p>
+                  <p className="text-xs text-green-600 text-center pt-2 font-manrope flex items-center gap-1 font-medium">
+                    AVALIAÇÃO GOOGLE{" "}
+                    <PiCheckFatFill className="text-green-600" size={12} />
+                  </p>
+                </div>
+
+                <div className="text-amber-500 text-base sm:text-lg mb-3 flex items-center justify-center">
+                  {Array.from({ length: review.rating }).map((_, i) => (
+                    <FaStar key={i} size={14} className="sm:w-4 sm:h-4" />
+                  ))}
+                </div>
+
+                <div className="flex-grow mb-4">
+                  <p className="text-gray-600 text-xs sm:text-sm font-manrope leading-relaxed text-center">
+                    "{displayText}"
+                  </p>
+                </div>
+
+                {shouldShowButton && (
+                  <div className="text-center mt-auto pt-2">
+                    <button
+                      onClick={() => toggleExpand(index)}
+                      className="text-[#D3AF37] hover:text-[#B38A4B] font-manrope text-xs font-medium transition-colors duration-300 underline"
+                    >
+                      {isExpanded ? "Ver menos" : "Ver mais"}
+                    </button>
+                  </div>
+                )}
+
+                {review.time && (
+                  <p className="text-gray-400 text-xs font-manrope text-center mt-3">
+                    {new Date(review.time).toLocaleDateString('pt-BR', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </p>
+                )}
               </div>
-              <div className="text-amber-500 text-base sm:text-lg mb-3 flex items-center justify-center">
-                {Array.from({ length: review.rating }).map((_, i) => (
-                  <FaStar key={i} size={14} className="sm:w-4 sm:h-4" />
-                ))}
-              </div>
-              <p className="text-gray-600 text-xs sm:text-sm font-manrope leading-relaxed text-center">
-                "{truncateText(review.text)}"
-              </p>
-              {review.time && (
-                <p className="text-gray-400 text-xs font-manrope text-center mt-3">
-                  {new Date(review.time).toLocaleDateString('pt-BR', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })}
-                </p>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
 
@@ -242,22 +271,26 @@ function Depoimentos() {
           rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-[#D3AF37] transition-colors duration-300"
         >
-          Ver todas as avaliações no Google <BsBoxArrowUpRight />
+          Ver todas as avaliações no Google
+          <BsBoxArrowUpRight />
         </a>
       </div>
-      <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mt-8">
+
+      <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mt-8">
         <div className="px-6 py-3">
           <div className="flex items-center gap-1">
             {[...Array(17)].map((_, i) => (
-              <div 
-                key={i} 
-                className={`w-2 h-2 rounded-full bg-[#D3AF37] ${i % 3 === 0 ? 'opacity-100' : i % 3 === 1 ? 'opacity-70' : 'opacity-40'}`}
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full bg-[#D3AF37] ${
+                  i % 3 === 0 ? 'opacity-100' : i % 3 === 1 ? 'opacity-70' : 'opacity-40'
+                }`}
               ></div>
             ))}
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 }
 
