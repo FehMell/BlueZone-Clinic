@@ -15,71 +15,88 @@ function ServicesSection() {
   const [isEnd, setIsEnd] = useState(false);
 
   const services = [
-    {
-      title: "Emagrecimento Saudável",
-      description: <> Conheça o Programa <span className="font-semibold"> Blue Health+ de Emagrecimento </span>, um método diferenciado que transforma a vida de centenas de pessoas todos os meses. Muito além da perda de peso, promovemos saúde, qualidade de vida e autoconfiança.</>,
-      icon: FaLeaf,
-      showButton: true,
-      link: "/emagrecimento"
-    },
-    {
-      title: "Reposição Hormonal",
-      description: "Indicada para homens com baixos níveis de testosterona. O tratamento melhora sintomas de cansaço, baixa libido, disfunção erétil, dificuldade para emagrecer e ganhar massa muscular.",
-      icon: FaHeartbeat,
-      showButton: true,
-      link: "reposicao-hormonal-masculina"
-    },
-    {
-      title: "Hipertrofia Muscular e Alta Performance",
-      description: "Elaboração de um plano personalizado às suas necessidades, visando melhoria do condicionamento físico, aumento da força e massa muscular. Inclui orientações sobre exercícios, alimentação e correção de distúrbios hormonais.",
-      icon: FaDumbbell,
-      showButton: true,
-      link: "/hipertrofia"
-    },
-    {
-      title: "Implantes Hormonais",
-      description: "Implantes subcutâneos liberam hormônios como testosterona e estrogênio de forma contínua, corrigindo déficits hormonais e aliviando sintomas como cansaço, queda de libido, dificuldade para emagrecer e ganho de gordura.",
-      icon: FaSyringe,
-      showButton: true,
-      link: "/implantes-hormonais"
-    },
-    {
-      title: "Menopausa",
-      description: "Focado em melhorar a qualidade de vida das mulheres durante a menopausa, nosso tratamento alivia sintomas como ondas de calor, instabilidade emocional, fadiga, insônia, baixa libido, suores noturnos e ressecamento vaginal.",
-      icon: FaHeart,
-      showButton: true,
-      link: "/menopausa"
-    },
-    {
-      title: "Terapias Injetáveis",
-      description: "Administração direta de vitaminas, minerais, aminoácidos, antioxidantes e outros ativos, indicados de acordo com suas necessidades específicas, via intramuscular ou intravenosa.",
-      icon: FaSyringe,
-      showButton: true,
-      link: "/terapias-injetaveis"
-    },
-    {
-      title: "Bioimpedância",
-      description: "Exame para avaliar a composição corporal, fornecendo informações essenciais como percentual de massa magra e gordura, além de análises detalhadas do corpo.",
-      icon: FaWeight,
-      showButton: false,
-      link: null
-    },
-    {
-      title: "Nutricionista",
-      description: <> Elaboração de um plano alimentar personalizado por nossa <span className="font-semibold">Nutricionista Ana Paula </span>, alinhado aos seus objetivos de saúde, estética e bem-estar geral. </>,
-      icon: FaUserNurse,
-      showButton: false,
-      link: null
-
-    },
-    {
-      title: "Estética Corporal e Facial",
-      description: "Procedimentos que promovem harmonia, rejuvenescimento, firmeza e confiança, auxiliando na recuperação da autoestima.",
-      icon: FaSpa,
-      showButton: true,
-      link:"/estetica"
-    }
-  ];
+  {
+    title: "Emagrecimento Saudável",
+    description: (
+      <>
+        Conheça o <span className="font-semibold">Programa Blue Health+</span>, 
+        um método que vai além da perda de peso, promovendo saúde, bem-estar e autoconfiança.
+      </>
+    ),
+    icon: FaLeaf,
+    showButton: true,
+    link: "/emagrecimento"
+  },
+  {
+    title: "Reposição Hormonal",
+    description:
+      "Indicada para homens com baixos níveis de testosterona. Melhora energia, libido e desempenho físico.",
+    icon: FaHeartbeat,
+    showButton: true,
+    link: "/reposicao-hormonal-masculina"
+  },
+  {
+    title: "Hipertrofia Muscular e Alta Performance",
+    description:
+      "Plano personalizado para ganho de força e massa muscular, com orientações nutricionais e hormonais.",
+    icon: FaDumbbell,
+    showButton: true,
+    link: "/hipertrofia"
+  },
+  {
+    title: "Implantes Hormonais",
+    description:
+      "Implantes subcutâneos que equilibram hormônios e reduzem sintomas como cansaço e baixa libido.",
+    icon: FaSyringe,
+    showButton: true,
+    link: "/implantes-hormonais"
+  },
+  {
+    title: "Menopausa",
+    description:
+      "Tratamento que alivia sintomas da menopausa e melhora o bem-estar e a qualidade de vida das mulheres.",
+    icon: FaHeart,
+    showButton: true,
+    link: "/menopausa"
+  },
+  {
+    title: "Terapias Injetáveis",
+    description:
+      "Vitaminas, minerais e antioxidantes aplicados de forma personalizada para mais energia e vitalidade.",
+    icon: FaSyringe,
+    showButton: true,
+    link: "/terapias-injetaveis"
+  },
+  {
+    title: "Bioimpedância",
+    description:
+      "Exame que avalia sua composição corporal, indicando massa magra, gordura e outros indicadores de saúde.",
+    icon: FaWeight,
+    showButton: false,
+    link: null
+  },
+  {
+    title: "Nutricionista",
+    description: (
+      <>
+        Plano alimentar personalizado elaborado pela{" "}
+        <span className="font-semibold">Nutricionista Ana Paula</span>, 
+        alinhado aos seus objetivos de saúde e bem-estar.
+      </>
+    ),
+    icon: FaUserNurse,
+    showButton: false,
+    link: null
+  },
+  {
+    title: "Estética Corporal e Facial",
+    description:
+      "Procedimentos que promovem firmeza, rejuvenescimento e valorizam sua autoestima.",
+    icon: FaSpa,
+    showButton: true,
+    link: "/estetica"
+  }
+];
 
   useEffect(() => {
     if (swiperInstance) {
