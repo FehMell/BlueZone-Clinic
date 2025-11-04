@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { PiCheckFatFill } from "react-icons/pi";
+import BgAmarelo from "../images/bg-amarelo.png";
 
 function Depoimentos() {
   const [reviews, setReviews] = useState([]);
@@ -151,9 +152,15 @@ function Depoimentos() {
     fetchGoogleReviews();
   }, []);
 
-  return (
-    <div className="py-8 sm:py-12 lg:py-16 bg-white">
-      
+  return( <div
+    className="py-8 sm:py-12 lg:py-16 relative"
+   
+  >
+   
+    
+
+    <div className="relative z-10">
+
       <h2 className="font-marcellus text-center pb-4 sm:pb-6 pt-8 sm:pt-12 text-2xl sm:text-3xl font-semibold text-[#463D34]">
         O QUE DIZEM NOSSOS PACIENTES
       </h2>
@@ -195,19 +202,17 @@ function Depoimentos() {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 max-w-6xl mx-auto px-4">
+       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto px-4 items-start">
           {reviews.map((review, index) => {
             const isExpanded = expandedReviews[index] || false;
             const displayText = isExpanded ? review.text : truncateText(review.text, 150);
             const shouldShowButton = review.text && review.text.length > 150;
 
             return (
-              <div
-                key={index}
-                className={`flex-1 rounded-lg p-4 sm:p-6 border border-gray-100 hover:shadow-[6px_2px_30px_4px_rgba(115,115,115,0.5)] bg-white transition-all duration-300 transform hover:-translate-y-1 flex flex-col ${
-                  isExpanded ? 'min-h-[400px]' : 'min-h-[320px]'
-                }`}
-              >
+             <div
+  key={index}
+  className="rounded-lg p-4 sm:p-6 border border-gray-100 hover:shadow-[6px_2px_30px_4px_rgba(115,115,115,0.5)] bg-white transition-all duration-300 transform hover:-translate-y-1 flex flex-col"
+>
                 <div className="flex flex-col items-center mb-4">
                   <img
                     src={review.profile_photo_url}
@@ -290,6 +295,7 @@ function Depoimentos() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
