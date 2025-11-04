@@ -24,7 +24,17 @@ useEffect(() => {
       localStorage.removeItem("scrollToDuvidas");
     }
   }
+
+
+ if (localStorage.getItem("scrollToTratamentos") === "true") {
+    const section = document.getElementById("tratamentos");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      localStorage.removeItem("scrollToTratamentos");
+    }
+  }
 }, []);
+
 
   return (
     <Router>

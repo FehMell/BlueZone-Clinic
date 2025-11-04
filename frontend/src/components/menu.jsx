@@ -79,13 +79,13 @@ function Menu() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <button
-              className="hover:text-gray-800 cursor-pointer flex items-center justify-center py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
+           <button  onClick={() => handleScrollClick("tratamentos")}
+              className="hover:text-gray-800 cursor-pointer flex items-center justify-center py-2 focus:outline-none focus:ring-0 focus:ring-gray-500 "
               aria-expanded={open}
               aria-haspopup="true"
               aria-label="Abrir menu de tratamentos"
             >
-              Tratamentos
+             Tratamentos  
             </button>
             
             {open && (
@@ -164,7 +164,7 @@ function Menu() {
           <li>
             <button
               onClick={() => handleScrollClick("duvidas")}
-              className="hover:text-gray-800 cursor-pointer py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              className="hover:text-gray-800 cursor-pointer py-2 focus:outline-none focus:ring-0 focus:ring-gray-500"
               aria-label="Ir para seção de dúvidas"
             >
               Dúvidas
