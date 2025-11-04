@@ -253,27 +253,23 @@ const services = [
           ))}
         </Swiper>
 
-       <button 
-         ref={prevRef} 
-         className={`absolute left-2 lg:-left-12 top-1/2 -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
-           isBeginning ? 'opacity-0 pointer-events-none' : 'opacity-100'
-         }`}
-         aria-label="Slide anterior"
-       >
-         <BsChevronLeft className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
-         <span className="sr-only">Slide anterior</span>
-       </button>
-       <button 
-         ref={nextRef} 
-         className={`absolute right-2 lg:-right-12 top-1/2 -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
-           isEnd ? 'opacity-0 pointer-events-none' : 'opacity-100'
-         }`}
-         aria-label="Próximo slide"
-       >
-         <BsChevronRight className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
-         <span className="sr-only">Próximo slide</span>
-       </button>
-      </div>
+        <button 
+           onClick={() => swiperInstance?.slidePrev()}
+           className={`absolute left-[-12px] top-[160px] -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
+             isBeginning ? 'opacity-0 pointer-events-none' : 'opacity-100'
+           }`}
+         >
+           <BsChevronLeft className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
+         </button>
+         <button 
+           onClick={() => swiperInstance?.slideNext()}
+           className={`absolute right-[-12px] top-[160px] -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
+             isEnd ? 'opacity-0 pointer-events-none' : 'opacity-100'
+           }`}
+         >
+           <BsChevronRight className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
+         </button>
+       </div>
 
       <style>
         {`

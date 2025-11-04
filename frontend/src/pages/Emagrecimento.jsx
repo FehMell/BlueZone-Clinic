@@ -70,6 +70,23 @@ function Emagrecimento() {
   },
 ];
 
+  useEffect(() => {
+    if (swiperInstance) {
+      swiperInstance.params.navigation.prevEl = prevRef.current;
+      swiperInstance.params.navigation.nextEl = nextRef.current;
+      swiperInstance.navigation.init();
+      swiperInstance.navigation.update();
+
+      setIsBeginning(swiperInstance.isBeginning);
+      setIsEnd(swiperInstance.isEnd);
+
+      swiperInstance.on('slideChange', () => {
+        setIsBeginning(swiperInstance.isBeginning);
+        setIsEnd(swiperInstance.isEnd);
+      });
+    }
+  }, [swiperInstance]);
+
   return (
     <div className="overflow-x-hidden">
       <div className="lg:grid lg:grid-cols-[1.65fr_1fr] bg-white">
@@ -430,7 +447,20 @@ function Emagrecimento() {
     spaceBetween={1}
     slidesPerView={1}
     loop={false}
-    onSwiper={setSwiperInstance}
+    navigation={{
+      prevEl: prevRef.current,
+      nextEl: nextRef.current,
+    }}
+    onSwiper={(swiper) => {
+      setSwiperInstance(swiper);
+      // Atualiza a navegação após o Swiper ser inicializado
+      setTimeout(() => {
+        swiper.params.navigation.prevEl = prevRef.current;
+        swiper.params.navigation.nextEl = nextRef.current;
+        swiper.navigation.init();
+        swiper.navigation.update();
+      }, 100);
+    }}
     onSlideChange={(swiper) => {
       setIsBeginning(swiper.isBeginning);
       setIsEnd(swiper.isEnd);
@@ -458,25 +488,21 @@ function Emagrecimento() {
   </Swiper>
   
   
-  <button 
-    ref={prevRef} 
-    className={`absolute left-2 lg:-left-12 top-1/2 -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
+    <button 
+    onClick={() => swiperInstance?.slidePrev()}
+    className={`absolute left-[-12px] top-[160px] -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
       isBeginning ? 'opacity-0 pointer-events-none' : 'opacity-100'
     }`}
-    aria-label="Slide anterior"
   >
     <BsChevronLeft className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
-    <span className="sr-only">Slide anterior</span>
   </button>
   <button 
-    ref={nextRef} 
-    className={`absolute right-2 lg:-right-12 top-1/2 -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
+    onClick={() => swiperInstance?.slideNext()}
+    className={`absolute right-[-12px] top-[160px] -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
       isEnd ? 'opacity-0 pointer-events-none' : 'opacity-100'
     }`}
-    aria-label="Próximo slide"
   >
     <BsChevronRight className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
-    <span className="sr-only">Próximo slide</span>
   </button>
 </div>
       <style>
