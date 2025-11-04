@@ -10,8 +10,22 @@ import Implantes from "./pages/Implantes";
 import TerapiasInjt from "./pages/TerapiasInjt";
 import Sobre from "./pages/Sobre";
 import Footer from "./components/footer"
+import { useEffect } from "react";
 
 function App() {
+
+  
+useEffect(() => {
+  
+  if (localStorage.getItem("scrollToDuvidas") === "true") {
+    const section = document.getElementById("duvidas");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      localStorage.removeItem("scrollToDuvidas");
+    }
+  }
+}, []);
+
   return (
     <Router>
       

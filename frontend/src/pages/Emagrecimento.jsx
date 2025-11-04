@@ -26,54 +26,49 @@ function Emagrecimento() {
   const [isEnd, setIsEnd] = useState(false);
 
   const services = [
-    {
-      title: "Avaliação Médica",
-      description: "A avaliação é conduzida por meio de uma consulta médica minuciosa, complementada por exames laboratoriais, com o objetivo de identificar as possíveis causas do ganho de peso e direcionar o tratamento mais eficaz.",
-      icon: LiaFileMedicalAltSolid,
-      showButton: false,
-    },
-    {
-      title: "Nutricionista",
-      description:
-        <>Elaboração de um plano alimentar personalizado por nossa <span className="font-semibold"> nutricionista Ana Paula </span>, alinhado aos seus objetivos de saúde, estética e bem-estar geral. Nossa abordagem busca ampliar o conhecimento dos pacientes sobre nutrição, capacitando-os a fazer escolhas conscientes em suas refeições e a manter uma dieta equilibrada e rica em nutrientes.</>,
-      icon: MdOutlineNoFood,
-      showButton: false,
-    },
-    {
-      title: "Acompanhamento",
-      description: <>Acompanhamento semanal na clínica, onde são avaliados por uma equipe multidisciplinar dedicada a monitorar o progresso do tratamento.<br /> <br />
-      <div className="text-left">
-1) Pesagem semanal. <br />
-2) Análises detalhadas da composição corporal por bioimpedância. <br />
-3) Interrogatório sobre dieta e treino da semana. <br />
-4) Administração de medicamentos. <br />
-5) Ajustes e orientações direcionadas.
-</div></>,
-      icon: FaHandSparkles,
-      showButton: false,
-    },
-    {
-      title: "Exercício Físico",
-      description:
-        "O programa inclui orientações sobre os exercícios mais adequados aos objetivos, promovendo o combate ao sedentarismo. Com foco em estratégias para o aumento de massa muscular, buscamos educar nossos pacientes sobre a importância do exercício físico na melhoria da saúde global, garantindo que essa prática seja incorporada de forma duradoura ao estilo de vida.",
-      icon: FaDumbbell,
-      showButton: false,
-    },
-    {
-      title: "Terapias Hormonais",
-      description:
-        "Diagnóstico e correção de possíveis deficiências que estejam comprometendo os resultados.",
-      icon: FaSyringe,
-      showButton: false,
-    },
-    {
-      title: "Obesidade",
-      description:
-        <>A obesidade é uma doença crônica que, assim como outras condições de saúde, exigem o uso de medicamentos para seu controle. Após uma avaliação médica detalhada, é possível determinar o tratamento mais adequado, respeitando a individualidade de cada paciente. Sempre serão indicados os tratamentos mais efetivos e seguros, além de outras opções de segunda linha aos pacientes, que terão autonomia para realizar a escolha. <br /> <br /> Também realizamos uma abordagem comportamental em todos os encontros, incentivando reflexões sobre o comportamento alimentar e o estilo de vida, além de orientar na criação de estratégias eficazes para superar essas barreiras e alcançar resultados sustentáveis.</>,
-      icon: FaWeight,
-      showButton: false,
-    },
-  ];
+  {
+    title: "Avaliação Médica",
+    description:
+      "Consulta detalhada com exames laboratoriais para identificar as causas do ganho de peso e definir o tratamento mais eficaz.",
+    icon: LiaFileMedicalAltSolid,
+    showButton: false,
+  },
+  {
+    title: "Nutricionista",
+    description:
+      <>Plano alimentar personalizado elaborado pela <span className="font-semibold">nutricionista Ana Paula</span>, alinhado aos seus objetivos e focado em promover escolhas conscientes e uma alimentação equilibrada.</>,
+    icon: MdOutlineNoFood,
+    showButton: false,
+  },
+  {
+    title: "Acompanhamento",
+    description:
+      <>Acompanhamento semanal com equipe multidisciplinar para avaliar o progresso por meio de pesagens, bioimpedância e ajustes de dieta, treino e medicação.</>,
+    icon: FaHandSparkles,
+    showButton: false,
+  },
+  {
+    title: "Exercício Físico",
+    description:
+      "Orientações sobre treinos adequados aos seus objetivos, incentivando o aumento de massa muscular e a manutenção de hábitos saudáveis a longo prazo.",
+    icon: FaDumbbell,
+    showButton: false,
+  },
+  {
+    title: "Terapias Hormonais",
+    description:
+      "Diagnóstico e reposição de deficiências hormonais que possam comprometer o bem-estar e os resultados do tratamento.",
+    icon: FaSyringe,
+    showButton: false,
+  },
+  {
+    title: "Obesidade",
+    description:
+      <>Tratamento individualizado da obesidade com o uso seguro de medicamentos e abordagem comportamental, promovendo mudanças duradouras no estilo de vida.</>,
+    icon: FaWeight,
+    showButton: false,
+  },
+];
 
   return (
     <div className="overflow-x-hidden">
@@ -113,28 +108,22 @@ function Emagrecimento() {
               alt="Logo Bluezone"
               className="w-14 lg:w-16 pb-4 lg:pb-6"
             />
+<h1 className="font-marcellus text-2xl lg:text-[38px] xl:text-[42px] font-bold text-[#463D34] leading-tight pb-4">
+  Emagrecimento Saudável
+</h1>
 
-            <h1 className="font-marcellus text-2xl lg:text-[38px] xl:text-[42px] font-bold text-[#463D34] leading-tight pb-4">
-              Emagrecimento Saudável
-            </h1>
+<h2 className="uppercase pb-2 font-marcellus text-base lg:text-xl xl:text-2xl font-semibold text-[#D3AF37]">
+  A Blue Zone Clinic promove um emagrecimento saudável e sustentável!
+</h2>
 
-            <h2 className="uppercase pb-2 font-marcellus text-base lg:text-xl xl:text-2xl font-semibold text-[#D3AF37]">
-              a Blue Zone Clinic PROMOVE emagrecimento saudável e sustentável!
-            </h2>
+<p className="pb-4 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  Nosso processo de emagrecimento é acompanhado por bioimpedância, garantindo o monitoramento contínuo da composição corporal e ajustes precisos no tratamento.
+</p>
 
-            <p className="pb-4 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              Na Blue Zone Clinic, durante o processo de emagrecimento,
-              realizamos um monitoramento contínuo e rigoroso da composição
-              corporal por meio da bioimpedância, permitindo acompanhar seu
-              progresso e identificar necessidades de ajustes no tratamento.
-            </p>
+<p className="pb-8 lg:pb-10 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  Após avaliação médica e nutricional, criamos um plano personalizado para alcançar resultados reais, com foco em saúde e equilíbrio.
+</p>
 
-            <p className="pb-8 lg:pb-10 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              Após uma avaliação detalhada que abrange consulta médica, consulta
-              com nutricionista, avaliação de exames laboratoriais e da
-              composição corporal por bioimpedância, elaboramos um plano de
-              tratamento personalizado e específico pro seu caso.
-            </p>
 
             <div className="w-full flex justify-center">
               <div className="border-2 border-[#D3AF37] px-1 py-1 hover:scale-110 transform transition-transform duration-300 mb-4">
@@ -314,8 +303,8 @@ function Emagrecimento() {
 
      {/*SESSÃO DE RESULTADOS*/}
 
-<div className="py-12 lg:py-16 xl:py-20">
-  <h2 className="text-center text-2xl lg:text-3xl xl:text-4xl font-marcellus text-[#D3AF37] pb-6 lg:pb-8 font-semibold">
+<div className="py-12 lg:py-16 xl:py-20 bg-white">
+  <h2 className="text-center text-2xl lg:text-3xl xl:text-4xl font-marcellus text-[#463D34] pb-6 lg:pb-8 font-semibold">
     RESULTADOS COMPROVADOS
   </h2>
 
@@ -403,15 +392,29 @@ function Emagrecimento() {
   </div>
 </div>
 
+ <div className="px-6 py-3 flex justify-center pt-12">
+          <div className="flex items-center gap-1">
+            {[...Array(17)].map((_, i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full bg-[#D3AF37] ${
+                  i % 3 === 0 ? 'opacity-100' : i % 3 === 1 ? 'opacity-70' : 'opacity-40'
+                }`}
+              ></div>
+            ))}
+          </div>
+        </div>
+    
+
       {/*SESSÃO DE TRATAMENTO*/}
 
           
 
-      <div className="text-center pt-20">
+      <div className="text-center pt-16">
         <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">
           TRATAMENTOS DE EMAGRECIMENTO ENCONTRADOS
         </h2>
-        <h2 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">
+        <h2 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#463D34]">
           NA BLUE ZONE CLINIC
         </h2>
         <p className="font-manrope pb-6 lg:pb-8 text-gray-500 text-xs lg:text-sm max-w-2xl mx-auto px-4">

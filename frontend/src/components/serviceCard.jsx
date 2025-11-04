@@ -25,7 +25,7 @@ const ServiceCard = ({ icon, title, description, className = "", showButton = tr
         <div className="text-center pt-6">
           <Link 
             to={link}
-            className="inline-block bg-[#D3AF37] text-white font-bold px-6 py-2 rounded-md transform transition-transform duration-300 hover:scale-110 hover:bg-[#B38A4B] text-sm cursor-pointer"
+            className="inline-block bg-white border-[#D3AF37] border-2 text-[#463D34] font-bold px-6 py-2 rounded-md transform transition-transform duration-300 hover:scale-110 hover:bg-[#B38A4B] text-sm cursor-pointer"
             onClick={(e) => {
               console.log('Link clicado:', link);
               console.log('Tipo do link:', typeof link);

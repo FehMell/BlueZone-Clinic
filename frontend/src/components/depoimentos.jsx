@@ -44,10 +44,10 @@ function Depoimentos() {
 
         const data = await response.json();
         if (data.result && data.result.reviews) {
-          // Filtrar apenas reviews de 5 estrelas
+          
           const fiveStarReviews = data.result.reviews.filter(review => review.rating === 5);
           
-          // Se não houver reviews de 5 estrelas, usar as 3 primeiras
+          
           const reviewsToUse = fiveStarReviews.length > 0 
             ? fiveStarReviews.slice(0, 3) 
             : data.result.reviews.slice(0, 3);
@@ -75,10 +75,10 @@ function Depoimentos() {
 
           const data2 = await response2.json();
           if (data2.result && data2.result.reviews) {
-            // Filtrar apenas reviews de 5 estrelas
+            
             const fiveStarReviews = data2.result.reviews.filter(review => review.rating === 5);
             
-            // Se não houver reviews de 5 estrelas, usar as 3 primeiras
+            
             const reviewsToUse = fiveStarReviews.length > 0 
               ? fiveStarReviews.slice(0, 3) 
               : data2.result.reviews.slice(0, 3);
@@ -153,7 +153,8 @@ function Depoimentos() {
 
   return (
     <div className="py-8 sm:py-12 lg:py-16 bg-white">
-      <h2 className="font-marcellus text-center pb-4 sm:pb-6 pt-8 sm:pt-12 text-2xl sm:text-3xl font-semibold text-[#D3AF37]">
+      
+      <h2 className="font-marcellus text-center pb-4 sm:pb-6 pt-8 sm:pt-12 text-2xl sm:text-3xl font-semibold text-[#463D34]">
         O QUE DIZEM NOSSOS PACIENTES
       </h2>
       <p className="font-manrope text-center text-gray-500 text-xs sm:text-sm mb-8 sm:mb-10 px-4">
@@ -164,7 +165,7 @@ function Depoimentos() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="text-red-400 hover:text-red-500">Doctoralia</span>
+          <span className="text-red-700 hover:text-red-800 font-semibold">Doctoralia</span>
         </a>
       </p>
 
@@ -220,9 +221,9 @@ function Depoimentos() {
                   <p className="text-sm sm:text-base font-semibold text-gray-800 text-center font-marcellus">
                     {review.author_name}
                   </p>
-                  <p className="text-xs text-green-600 text-center pt-2 font-manrope flex items-center gap-1 font-medium">
+                  <p className="text-xs text-green-800 text-center pt-2 font-manrope flex items-center gap-1 font-medium">
                     AVALIAÇÃO GOOGLE{" "}
-                    <PiCheckFatFill className="text-green-600" size={12} />
+                    <PiCheckFatFill className="text-green-800" size={12} />
                   </p>
                 </div>
 
@@ -242,7 +243,7 @@ function Depoimentos() {
                   <div className="text-center mt-auto pt-2">
                     <button
                       onClick={() => toggleExpand(index)}
-                      className="text-[#D3AF37] hover:text-[#B38A4B] font-manrope text-xs font-medium transition-colors duration-300 underline"
+                      className="text-black hover:text-gray-800 font-manrope text-xs font-medium transition-colors duration-300 underline"
                     >
                       {isExpanded ? "Ver menos" : "Ver mais"}
                     </button>
@@ -250,7 +251,7 @@ function Depoimentos() {
                 )}
 
                 {review.time && (
-                  <p className="text-gray-400 text-xs font-manrope text-center mt-3">
+                  <p className="text-gray-700 text-xs font-manrope text-center mt-3">
                     {new Date(review.time).toLocaleDateString('pt-BR', {
                       year: 'numeric',
                       month: 'long',

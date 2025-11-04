@@ -12,7 +12,7 @@ function Footer() {
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-center items-start md:items-start gap-8 sm:gap-12 md:gap-20">
           
-          
+         
           <div className="text-center md:text-left w-full md:w-auto">
             <h3 className="text-lg md:text-xl font-semibold font-marcellus pb-3 sm:pb-4 text-[#D3AF37]">Onde estamos:</h3>
             <p className="text-white mt-2 font-manrope text-xs sm:text-sm">Alameda Campinas, 728 – CJ 1201 – </p>
@@ -23,47 +23,49 @@ function Footer() {
             <p className="font-manrope text-xs sm:text-sm">Sábado: 09h00 às 13h00.</p>
           </div>
 
-          
+         
           <div className="text-center md:text-left w-full md:w-auto">
             <h3 className="text-lg md:text-xl font-marcellus text-[#D3AF37] pb-2 font-semibold">Contato:</h3>
-            <ul className="space-y-3">
-               <a href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20oferecidos%20pela%20Blue%20Zone." target="_blank">
-              <li className="flex items-center justify-center md:justify-start gap-2 text-xs sm:text-sm hover:text-[#D3AF37] transition-colors duration-300">
-                
+            
+         
+            <a href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20oferecidos%20pela%20Blue%20Zone." target="_blank" className="block mb-3">
+              <div className="flex items-center justify-center md:justify-start gap-2 text-xs sm:text-sm hover:text-[#D3AF37] transition-colors duration-300">
                 <div className="bg-[#D3AF37] rounded-full p-2 flex items-center justify-center">
                   <FaWhatsapp className="text-white" size={16} />
                 </div>
                 (11) 94519-7405
-              </li>
-              </a>
-              <li className="flex items-center justify-center md:justify-start gap-2 text-xs sm:text-sm">
-                <div className="bg-[#D3AF37] rounded-full p-2 flex items-center justify-center">
-                  <MdOutlineMail className="text-white" size={16} />
-                </div>
-                <span className="break-all">contato@bluezoneclinic.com.br</span>
-              </li>
-            </ul>
+              </div>
+            </a>
+            
+          
+            <div className="flex items-center justify-center md:justify-start gap-2 text-xs sm:text-sm mb-6">
+              <div className="bg-[#D3AF37] rounded-full p-2 flex items-center justify-center">
+                <MdOutlineMail className="text-white" size={16} />
+              </div>
+              <span className="break-all">contato@bluezoneclinic.com.br</span>
+            </div>
 
             <h3 className="text-lg md:text-xl font-marcellus py-3 sm:py-4 text-[#D3AF37] font-semibold">Redes Sociais:</h3>
-            <ul className="font-manrope text-xs sm:text-sm space-y-3">
-             <a href="https://www.instagram.com/thiagogarciadr/" target="_blank"> 
-               <li className="flex items-center justify-center md:justify-start gap-2 hover:text-[#D3AF37] transition-colors duration-300">
+            
+          
+            <a href="https://www.instagram.com/thiagogarciadr/" target="_blank" className="block mb-3"> 
+              <div className="flex items-center justify-center md:justify-start gap-2 hover:text-[#D3AF37] transition-colors duration-300 text-xs sm:text-sm">
                 <div className="bg-[#D3AF37] rounded-full p-2 flex items-center justify-center">
                   <FaInstagram className="text-white" size={16} /> 
                 </div>
                 @thiagogarciadr
-              </li>
-              </a>
-              
-            <a href="https://www.instagram.com/bluezonesp/" target="_blank"> 
-              <li className="flex items-center justify-center md:justify-start gap-2 hover:text-[#D3AF37] transition-colors duration-300">
-                 <div className="bg-[#D3AF37] rounded-full p-2 flex items-center justify-center">
+              </div>
+            </a>
+            
+            
+            <a href="https://www.instagram.com/bluezonesp/" target="_blank" className="block"> 
+              <div className="flex items-center justify-center md:justify-start gap-2 hover:text-[#D3AF37] transition-colors duration-300 text-xs sm:text-sm">
+                <div className="bg-[#D3AF37] rounded-full p-2 flex items-center justify-center">
                   <FaInstagram className="text-white" size={16} /> 
                 </div>
                 @bluezonesp  
-              </li>  
-             </a>
-            </ul>
+              </div>  
+            </a>
           </div>
 
         </div>

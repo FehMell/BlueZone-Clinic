@@ -25,54 +25,50 @@ function Hipertrofia() {
       const [isEnd, setIsEnd] = useState(false);
     
       const services = [
-        {
-          title: "Avaliação Médica",
-          description: "A avaliação é conduzida por meio de uma consulta médica detalhada, complementada por exames laboratoriais específicos, com o objetivo de identificar fatores que possam influenciar os resultados e, dessa forma, indicar o tratamento mais adequado.",
-          icon: LiaFileMedicalAltSolid,
-          showButton: false,
-        },
-        {
-          title: "Nutricionista",
-          description:
-            <>Elaboração de um plano alimentar personalizado por nossa <span className="font-semibold"> nutricionista Ana Paula </span>, com foco na otimização do ganho de massa muscular e na redução da gordura corporal e visceral.</>,
-          icon: MdOutlineNoFood,
-          showButton: false,
-        },
-        {
-          title: "Acompanhamento",
-          description: <>Acompanhamento semanal na clínica, onde são avaliados por uma equipe multidisciplinar dedicada a monitorar o progresso do tratamento.<br /> <br />
-          <div className="text-left">
-    1) Pesagem semanal. <br />
-    2) Análises detalhadas da composição corporal por bioimpedância. <br />
-    3) Interrogatório sobre dieta e treino da semana. <br />
-    4) Administração de medicamentos. <br />
-    5) Ajustes e orientações direcionadas.
-    </div></>,
-          icon: FaHandSparkles,
-          showButton: false,
-        },
-        {
-          title: "Exercício Físico",
-          description:
-            "O programa inclui orientações sobre os exercícios mais adequados aos objetivos, promovendo o combate ao sedentarismo. Com foco em estratégias para o aumento de massa muscular, buscamos educar nossos pacientes sobre a importância do exercício físico na melhoria da saúde global, garantindo que essa prática seja incorporada de forma duradoura ao estilo de vida.",
-          icon: FaDumbbell,
-          showButton: false,
-        },
-        {
-          title: "Terapias Hormonais",
-          description:
-            "Diagnóstico e correção de possíveis deficiências que estejam comprometendo os resultados.",
-          icon: FaSyringe,
-          showButton: false,
-        },
-        {
-          title: "Suplementos",
-          description:"Orientamos o uso de suplementos adequados aos objetivos, todos baseados em evidências científicas robustas, garantindo eficácia e segurança em seu uso.",  
-          icon: GiPill,
-          showButton: false,
-        },
-      ];
-    
+  {
+    title: "Avaliação Médica",
+    description:
+      "Consulta detalhada com exames laboratoriais para identificar fatores que influenciam os resultados e definir o tratamento mais adequado.",
+    icon: LiaFileMedicalAltSolid,
+    showButton: false,
+  },
+  {
+    title: "Nutricionista",
+    description:
+      <>Plano alimentar personalizado elaborado pela <span className="font-semibold">nutricionista Ana Paula</span>, focado no ganho de massa muscular e na redução de gordura corporal e visceral.</>,
+    icon: MdOutlineNoFood,
+    showButton: false,
+  },
+  {
+    title: "Acompanhamento",
+    description:
+      <>Acompanhamento semanal com equipe multidisciplinar para avaliar o progresso, realizar bioimpedância e ajustar dieta, treino e medicação conforme necessidade.</>,
+    icon: FaHandSparkles,
+    showButton: false,
+  },
+  {
+    title: "Exercício Físico",
+    description:
+      "Orientações sobre treinos adequados aos objetivos, estimulando o aumento de massa muscular e a adoção de hábitos saudáveis de forma duradoura.",
+    icon: FaDumbbell,
+    showButton: false,
+  },
+  {
+    title: "Terapias Hormonais",
+    description:
+      "Diagnóstico e reposição de deficiências hormonais para otimizar o metabolismo, melhorar o desempenho e promover bem-estar geral.",
+    icon: FaSyringe,
+    showButton: false,
+  },
+  {
+    title: "Suplementos",
+    description:
+      "Indicação de suplementos com base científica, alinhados aos objetivos do tratamento, garantindo eficácia e segurança no uso.",
+    icon: GiPill,
+    showButton: false,
+  },
+];
+
   return (
     <div className="overflow-x-hidden">
       <div className="lg:grid lg:grid-cols-[1.65fr_1fr] bg-white">
@@ -112,33 +108,21 @@ function Hipertrofia() {
               className="w-14 lg:w-16 pb-4 lg:pb-6"
             />
 
-            <h1 className="font-marcellus text-2xl lg:text-[38px] xl:text-[42px] font-bold text-[#463D34] leading-tight pb-4">
-              Hipertrofia Muscular e Alta Performance
-            </h1>
+           <h1 className="font-marcellus text-2xl lg:text-[38px] xl:text-[42px] font-bold text-[#463D34] leading-tight pb-4">
+  Hipertrofia Muscular e Alta Performance
+</h1>
 
-            <h2 className="uppercase pb-2 font-marcellus text-base lg:text-xl xl:text-2xl font-semibold text-[#D3AF37]">
-              Descubra como a Blue Zone Clinic pode potencializar seus
-              resultados nos treinos e te ajudar a conquistar O SHAPE DOS SEUS
-              SONHOS
-            </h2>
+<h2 className="uppercase pb-2 font-marcellus text-base lg:text-xl xl:text-2xl font-semibold text-[#D3AF37]">
+  Alcance o shape dos seus sonhos com treinos e estratégias personalizadas.
+</h2>
 
-            <p className="pb-4 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              A hipertrofia muscular é fundamental para alcançar alta
-              performance esportiva, pois contribui para o aumento de força,
-              potência e resistência, elementos indispensáveis para um
-              desempenho otimizado. Além disso, o ganho de massa muscular
-              potencializa a eficiência do metabolismo energético, facilitando a
-              manutenção do peso corporal.{" "}
-            </p>
+<p className="pb-4 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  A hipertrofia muscular melhora força, resistência e metabolismo, elevando sua performance e resultados nos treinos.
+</p>
 
-            <p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              Na Blue Zone Clinic, desenvolvemos um plano individualizado para
-              impulsionar seu desempenho esportivo. Após uma avaliação completa
-              realizada por nosso médico nutrólogo e nutricionista, nossos
-              especialistas estabelecem objetivos claros e específicos para
-              serem alcançados.
-            </p>
-
+<p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  Na Blue Zone Clinic, criamos um plano individualizado após avaliação com nutrólogo e nutricionista, garantindo evolução segura e eficaz.
+</p>
 
             <div className="w-full flex justify-center mt-8 mb-4">
               <div className="border-2 border-[#D3AF37] px-1 py-1 hover:scale-110 transform transition-transform duration-300">
@@ -180,13 +164,27 @@ function Hipertrofia() {
         </div>
       </div>
 
+                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pt-32 pb-[-4]">
+        <div className="px-6 py-3">
+          <div className="flex items-center gap-1">
+            {[...Array(17)].map((_, i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full bg-[#D3AF37] ${
+                  i % 3 === 0 ? 'opacity-100' : i % 3 === 1 ? 'opacity-70' : 'opacity-40'
+                }`}
+              ></div>
+            ))}
+          </div>
+        </div>
+      </div>
       
       <div className="text-center pt-20">
         
         <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">
           TRATAMENTOS DE HIPERTROFIA ENCONTRADOS
         </h2>
-        <h2 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">
+        <h2 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#463D34]">
           NA BLUE ZONE CLINIC
         </h2>
         <p className="font-manrope pb-6 lg:pb-8 text-gray-500 text-xs lg:text-sm max-w-2xl mx-auto px-4">

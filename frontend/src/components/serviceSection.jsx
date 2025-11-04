@@ -103,10 +103,11 @@ function ServicesSection() {
     <div className="py-8 lg:py-10 px-4 lg:px-6 bg-neutral-100" id="tratamentos">
       
       
+      
       <div className="text-center max-w-7xl mx-auto">
         <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">TRATAMENTOS ENCONTRADOS</h2>
-        <h3 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">NA BLUE ZONE CLINIC</h3>
-        <p className="font-manrope pb-6 lg:pb-8 text-gray-500 text-xs lg:text-sm max-w-2xl mx-auto px-4">
+        <h3 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#463D34]">NA BLUE ZONE CLINIC</h3>
+        <p className="font-manrope pb-6 lg:pb-8 text-gray-700 text-xs lg:text-sm max-w-2xl mx-auto px-4">
           Unimos conforto às mais avançadas tecnologias médicas para refletir nosso compromisso com o seu cuidado integral.
         </p>
 
@@ -155,22 +156,26 @@ function ServicesSection() {
           </div>
 
           
-          <button 
-            ref={prevRef} 
-            className={`absolute left-2 lg:-left-12 top-1/2 -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
-              isBeginning ? 'opacity-0 pointer-events-none' : 'opacity-100'
-            }`}
-          >
-            <BsChevronLeft className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
-          </button>
-          <button 
-            ref={nextRef} 
-            className={`absolute right-2 lg:-right-12 top-1/2 -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
-              isEnd ? 'opacity-0 pointer-events-none' : 'opacity-100'
-            }`}
-          >
-            <BsChevronRight className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
-          </button>
+    <button 
+  ref={prevRef} 
+  className={`absolute left-2 lg:-left-12 top-1/2 -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
+    isBeginning ? 'opacity-0 pointer-events-none' : 'opacity-100'
+  }`}
+  aria-label="Slide anterior"
+>
+  <BsChevronLeft className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
+  <span className="sr-only">Slide anterior</span>
+</button>
+<button 
+  ref={nextRef} 
+  className={`absolute right-2 lg:-right-12 top-1/2 -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
+    isEnd ? 'opacity-0 pointer-events-none' : 'opacity-100'
+  }`}
+  aria-label="Próximo slide"
+>
+  <BsChevronRight className="w-6 h-6 lg:w-8 lg:h-8 text-[#D3AF37]" />
+  <span className="sr-only">Próximo slide</span>
+</button>
         </div>
       </div>
 

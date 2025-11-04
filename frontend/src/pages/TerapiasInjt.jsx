@@ -191,11 +191,27 @@ const services = [
                 </div>
               </div>
 
-              <div className="text-center pt-20">
+               <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pt-32 pb-[-4]">
+        <div className="px-6 py-3">
+          <div className="flex items-center gap-1">
+            {[...Array(17)].map((_, i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full bg-[#D3AF37] ${
+                  i % 3 === 0 ? 'opacity-100' : i % 3 === 1 ? 'opacity-70' : 'opacity-40'
+                }`}
+              ></div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+
+              <div className="text-center pt-16">
                 <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">
                   O QUE AS TERAPIAS INJETÁVEIS PODEM OFERECER
                 </h2>
-                <h2 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">
+                <h2 className="font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#463D34]">
                   Benefícios clínicos e práticos
                 </h2>
                 <p className="font-manrope pb-6 lg:pb-8 text-gray-500 text-xs lg:text-sm max-w-2xl mx-auto px-4">

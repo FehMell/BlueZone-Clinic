@@ -22,47 +22,47 @@ function ReposicaoHormonal() {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
 
-  const services = [
-    {
-      title: "Avaliação Médica",
-      description:
-        "A investigação é conduzida por meio de uma consulta médica detalhada, complementada por exames laboratoriais específicos, com o objetivo de identificar as possíveis causas da deficiência de testosterona e determinar o tratamento mais adequado.",
-      icon: LiaFileMedicalAltSolid,
-      showButton: false,
-    },
-    {
-      title: "Nutricionista",
-      description: (
-        <>
-          Elaboração de um plano alimentar personalizado por nossa{" "}
-          <span className="font-semibold"> nutricionista Ana Paula </span>, com
-          foco na otimização do ganho de massa muscular e na redução da gordura
-          corporal e visceral.
-        </>
-      ),
-      icon: MdOutlineNoFood,
-      showButton: false,
-    },
+ const services = [
+  {
+    title: "Avaliação Médica",
+    description:
+      "Consulta detalhada e exames específicos para identificar causas da baixa testosterona e definir o tratamento ideal.",
+    icon: LiaFileMedicalAltSolid,
+    showButton: false,
+  },
+  {
+    title: "Nutricionista",
+    description: (
+      <>
+        Plano alimentar personalizado pela{" "}
+        <span className="font-semibold">nutricionista Ana Paula</span>, focado
+        em ganho de massa e redução de gordura corporal.
+      </>
+    ),
+    icon: MdOutlineNoFood,
+    showButton: false,
+  },
+  {
+    title: "Exercício Físico",
+    description:
+      "Orientações sobre os melhores exercícios para aumentar a massa muscular e manter hábitos saudáveis de forma duradoura.",
+    icon: FaDumbbell,
+    showButton: false,
+  },
+  {
+    title: "Terapia de Reposição de Testosterona",
+    description: (
+      <>
+        Tratamento para restaurar os níveis hormonais e reduzir sintomas da
+        deficiência, com opções como gel, implantes ou injeções.
+      </>
+    ),
+    icon: FaSyringe,
+    showButton: false,
+  },
+];
 
-    {
-      title: "Exercício Físico",
-      description:
-        "O programa inclui orientações sobre os exercícios mais adequados aos objetivos, promovendo o combate ao sedentarismo. Com foco em estratégias para o aumento de massa muscular, buscamos educar nossos pacientes sobre a importância do exercício físico na melhoria da saúde global, garantindo que essa prática seja incorporada de forma duradoura ao estilo de vida.",
-      icon: FaDumbbell,
-      showButton: false,
-    },
-    {
-      title: "Terapia de Reposição de Testosterona",
-      description: (
-        <>
-          É o tratamento recomendado para esses casos, com o objetivo de restaurar os níveis de testosterona no organismo. < br />
-          <br />  reposição pode ser realizada por diferentes vias, como implantes hormonais, gel transdérmico ou injeções intramusculares.
-        </>
-      ),
-      icon: FaSyringe,
-      showButton: false,
-    },
-  ];
+
 
   return (
     <div className="overflow-x-hidden">
@@ -103,36 +103,25 @@ function ReposicaoHormonal() {
               className="w-14 lg:w-16 pb-4 lg:pb-6"
             />
 
-            <h1 className="font-marcellus text-2xl lg:text-[38px] xl:text-[42px] font-bold text-[#463D34] leading-tight pb-4">
-              Reposição Hormonal Masculina
-            </h1>
+           <h1 className="font-marcellus text-2xl lg:text-[38px] xl:text-[42px] font-bold text-[#463D34] leading-tight pb-4">
+  Reposição Hormonal Masculina
+</h1>
 
-            <h2 className="uppercase pb-2 font-marcellus text-base lg:text-xl xl:text-2xl font-semibold text-[#D3AF37]">
-              Descubra como a Blue Zone Clinic pode equilibrar seus hormônios e melhorar sua qualidade de vida!
-            </h2>
+<h2 className="uppercase pb-2 font-marcellus text-base lg:text-xl xl:text-2xl font-semibold text-[#D3AF37]">
+  Recupere seu equilíbrio hormonal e melhore sua qualidade de vida!
+</h2>
 
-            <p className="pb-4 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              A reposição hormonal é indicada para homens com níveis reduzidos
-              de testosterona, seu principal hormônio sexual. Embora essa queda
-              seja mais acentuada após os 40 anos, observa-se uma crescente
-              antecipação desses déficits em homens mais jovens, como
-              consequência do estilo de vida contemporâneo, marcado pelo
-              sedentarismo, altos níveis de estresse e obesidade.
-            </p>
+<p className="pb-4 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  A reposição hormonal é indicada para homens com baixa testosterona, algo cada vez mais comum, inclusive em jovens, devido ao estresse, sedentarismo e má alimentação.
+</p>
 
-            <p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              Os sinais de deficiência de testosterona podem incluir baixa
-              libido, disfunção erétil, fadiga, desânimo, ganho de peso
-              inexplicável, perda de massa muscular e alterações de humor podem
-              ser indicativos de deficiência de testosterona.
-            </p>
+<p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  Entre os sintomas estão a queda da libido, cansaço constante, perda de massa muscular e alterações de humor.
+</p>
 
-            <p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              O tratamento permite aliviar esses sintomas, trazendo benefícios
-              significativos na qualidade de vida, incluindo o aumento dos
-              níveis de energia, melhora do desempenho sexual e da composição
-              corporal.
-            </p>
+<p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  O tratamento melhora a energia, o desempenho físico e sexual, além de contribuir para uma melhor disposição e autoestima.
+</p>
 
             <div className="border-2 border-[#D3AF37] px-1 py-1 hover:scale-110 transform transition-transform duration-300 mb-4 mt-8 ">
               <a
@@ -156,7 +145,7 @@ function ReposicaoHormonal() {
             <div className="absolute left-[5%] w-[90%] h-full bg-gradient-to-r from-transparent via-white/80 to-transparent animate-reflexoLocal"></div>
           </div>
           
-          {/* wrapper ensures the PNG stays fully inside the background and doesn't overflow */}
+          
           <div className="absolute inset-0 z-30 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-16">
             <img
               src={Thiago}
@@ -172,11 +161,27 @@ function ReposicaoHormonal() {
         </div>
       </div>
 
-      <div className="text-center pt-20">
+      <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pt-32 pb-[-4]">
+        <div className="px-6 py-3">
+          <div className="flex items-center gap-1">
+            {[...Array(17)].map((_, i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full bg-[#D3AF37] ${
+                  i % 3 === 0 ? 'opacity-100' : i % 3 === 1 ? 'opacity-70' : 'opacity-40'
+                }`}
+              ></div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+
+      <div className="text-center pt-16">
         <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">
           BASES DO PROTOCOLO BLUE ZONE
         </h2>
-        <h2 className="font-marcellus font-semibold pb-10 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37] uppercase">
+        <h2 className="font-marcellus font-semibold pb-10 lg:pb-4 text-xl lg:text-3xl text-[#463D34]  uppercase">
           Deficiência Hormonal Masculina
         </h2>
       </div>

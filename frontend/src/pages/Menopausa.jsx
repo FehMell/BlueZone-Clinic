@@ -23,43 +23,45 @@ function Menopausa() {
   const [isEnd, setIsEnd] = useState(false);
 
   const services = [
-    {
-      title: "Avaliação Médica",
-      description:
-        "A avaliação é conduzida por meio de uma consulta médica detalhada, complementada por exames laboratoriais específicos, com o objetivo de identificar todas as deficiências e diagnosticar a menopausa com precisão. Com base nos resultados, é definido o tratamento mais adequado, incluindo a avaliação da necessidade de terapia hormonal.",
-      icon: LiaFileMedicalAltSolid,
-      showButton: false,
-    },
-    {
-      title: "Nutricionista",
-      description: (
-        <>
-          Elaboração de um plano alimentar personalizado por nossa{" "}
-          <span className="font-semibold"> nutricionista Ana Paula </span>, com
-          foco na otimização do ganho de massa muscular e na redução da gordura
-          corporal e visceral.
-        </>
-      ),
-      icon: MdOutlineNoFood,
-      showButton: false,
-    },
-   
-    {
-      title: "Exercício Físico",
-      description:
-        "O programa inclui orientações sobre os exercícios mais adequados aos objetivos, promovendo o combate ao sedentarismo. Com foco em estratégias para o aumento de massa muscular, buscamos educar nossos pacientes sobre a importância do exercício físico na melhoria da saúde global, garantindo que essa prática seja incorporada de forma duradoura ao estilo de vida.",
-      icon: FaDumbbell,
-      showButton: false,
-    },
-    {
-      title: "Terapia de Reposição Hormonal",
-      description:
-        <>É o tratamento recomendado para esses casos, com o objetivo de reduzir os sintomas da menopausa e restaurar a qualidade de vida da paciente.<br /> A reposição pode ser realizada por diferentes vias, como implantes hormonais, gel transdérmico ou por via oral.</>,
-      icon: FaSyringe,
-      showButton: false,
-    },
-   
-  ];
+  {
+    title: "Avaliação Médica",
+    description:
+      "Consulta detalhada com exames laboratoriais para identificar deficiências e diagnosticar a menopausa com precisão, definindo o tratamento e a necessidade de reposição hormonal.",
+    icon: LiaFileMedicalAltSolid,
+    showButton: false,
+  },
+  {
+    title: "Nutricionista",
+    description: (
+      <>
+        Plano alimentar personalizado elaborado pela{" "}
+        <span className="font-semibold">nutricionista Ana Paula</span>, focado
+        no ganho de massa muscular e na redução da gordura corporal e visceral.
+      </>
+    ),
+    icon: MdOutlineNoFood,
+    showButton: false,
+  },
+  {
+    title: "Exercício Físico",
+    description:
+      "Orientações sobre treinos adequados aos objetivos, estimulando o aumento de massa muscular e o combate ao sedentarismo, com foco em saúde e longevidade.",
+    icon: FaDumbbell,
+    showButton: false,
+  },
+  {
+    title: "Terapia de Reposição Hormonal",
+    description: (
+      <>
+        Tratamento indicado para aliviar os sintomas da menopausa e melhorar a
+        qualidade de vida. Pode ser realizado por meio de implantes hormonais,
+        gel transdérmico ou via oral, conforme avaliação médica.
+      </>
+    ),
+    icon: FaSyringe,
+    showButton: false,
+  },
+];
 
   return (
     <div className="overflow-x-hidden">
@@ -100,48 +102,25 @@ function Menopausa() {
               className="w-14 lg:w-16 pb-4 lg:pb-6"
             />
 
-            <h1 className="font-marcellus text-2xl lg:text-[38px] xl:text-[42px] font-bold text-[#463D34] leading-tight pb-4">
-              Menopausa
-            </h1>
+          <h1 className="font-marcellus text-2xl lg:text-[38px] xl:text-[42px] font-bold text-[#463D34] leading-tight pb-4">
+  Menopausa
+</h1>
 
-            <h2 className="uppercase pb-2 font-marcellus text-base lg:text-xl xl:text-2xl font-semibold text-[#D3AF37]">
-              Descubra como a Blue Zone Clinic pode te ajudar a passar por essa
-              fase com tranquilidade!
-            </h2>
+<h2 className="uppercase pb-2 font-marcellus text-base lg:text-xl xl:text-2xl font-semibold text-[#D3AF37]">
+  Viva essa fase com equilíbrio e bem-estar!
+</h2>
 
-            <p className="pb-4 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              A menopausa é uma etapa natural na vida da mulher, caracterizada
-              pelo encerramento dos ciclos menstruais e da capacidade
-              reprodutiva, sendo confirmada oficialmente após 12 meses
-              consecutivos sem menstruação. Geralmente ocorre entre os 45 e 55
-              anos, quando os ovários{" "}
-              <span className="font-semibold">
-                reduzem significativamente a produção dos hormônios estrogênio e
-                progesterona.
-              </span>
-            </p>
+<p className="pb-4 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  A menopausa marca o fim natural dos ciclos menstruais e costuma ocorrer entre os 45 e 55 anos, quando há redução dos hormônios estrogênio e progesterona.
+</p>
 
-            <p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              Os sintomas comuns dessa fase incluem{" "}
-              <span className="font-semibold">
-                {" "}
-                ondas de calor, suores noturnos, queda de libido, ressecamento
-                vaginal, alterações de humor, fadiga, insônia, perda de massa
-                muscular e óssea (osteoporose)
-              </span>
-              , entre outros.
-            </p>
+<p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  Sintomas como ondas de calor, insônia, fadiga e alterações de humor são comuns, mas podem ser controlados com o tratamento certo.
+</p>
 
-            <p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
-              {" "}
-              Na <span className="font-semibold">Blue Zone Clinic </span>,
-              realizamos uma avaliação detalhada do seu quadro para identificar
-              o tratamento mais adequado. Nossa abordagem abrange orientações
-              para mudanças no estilo de vida, incluindo uma alimentação
-              equilibrada, prática regular de atividades físicas e, quando
-              necessário, terapias hormonais, sempre com o objetivo de promover
-              seu bem-estar e qualidade de vida.
-            </p>
+<p className="pb-2 lg:pb-2 font-manrope text-gray-700 text-sm lg:text-[15px] xl:text-[16px] leading-relaxed">
+  Na <span className="font-semibold">Blue Zone Clinic</span>, realizamos uma avaliação completa e oferecemos planos personalizados, com orientação nutricional, atividade física e, quando necessário, terapia hormonal.
+</p>
 
             <div className="w-full flex justify-center mt-8 mb-4">
               <div className="border-2 border-[#D3AF37] px-1 py-1 hover:scale-110 transform transition-transform duration-300">
@@ -167,7 +146,7 @@ function Menopausa() {
             <div className="absolute left-[5%] w-[90%] h-full bg-gradient-to-r from-transparent via-white/80 to-transparent animate-reflexoLocal"></div>
           </div>
           
-          {/* wrapper ensures the PNG stays fully inside the background and doesn't overflow */}
+         
           <div className="absolute inset-0 z-30 flex items-end justify-center lg:justify-end lg:pr-8 xl:pr-16">
             <img
               src={Thiago}
@@ -183,11 +162,26 @@ function Menopausa() {
         </div>
       </div>
 
-      <div className="text-center pt-20">
+       <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pt-32 pb-[-4]">
+        <div className="px-6 py-3">
+          <div className="flex items-center gap-1">
+            {[...Array(17)].map((_, i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full bg-[#D3AF37] ${
+                  i % 3 === 0 ? 'opacity-100' : i % 3 === 1 ? 'opacity-70' : 'opacity-40'
+                }`}
+              ></div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center pt-16">
         <h2 className="font-manrope pt-6 lg:pt-10 pb-3 lg:pb-4 text-xs lg:text-sm text-gray-600 font-semibold">
           BASES DO PROTOCOLO BLUE ZONE
         </h2>
-        <h2 className="font-marcellus font-semibold pb-10 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">
+        <h2 className="font-marcellus font-semibold pb-10 lg:pb-4 text-xl lg:text-3xl text-[#463D34]">
           MENOPAUSA
         </h2>
        

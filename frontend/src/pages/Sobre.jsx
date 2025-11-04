@@ -125,51 +125,51 @@ function Sobre() {
   <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-400/10 rounded-full blur-[90px]"></div>
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-400/5 rounded-full blur-[100px]"></div>
         
-        <h2 className="font-manrope pb-3 lg:pb-4 text-xs lg:text-sm text-gray-300 font-semibold">
-          Do Agendamento ao Acompanhamento
-        </h2>
-        <h2 className="uppercase font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">
-          Na Blue Zone Clinic
-        </h2>
-        <p className="font-manrope lg:pb-8 text-gray-400 text-xs lg:text-sm max-w-2xl mx-auto px-4">
-          Entenda como funciona nossa consulta e como cuidamos do seu bem-estar.
-        </p>
+  <h2 className="font-manrope pb-3 lg:pb-4 text-xs lg:text-sm text-gray-300 font-semibold">
+    Do Agendamento ao Acompanhamento
+  </h2>
+  <h2 className="uppercase font-marcellus font-semibold pb-3 lg:pb-4 text-xl lg:text-3xl text-[#D3AF37]">
+    Na Blue Zone Clinic
+  </h2>
+  <p className="font-manrope lg:pb-8 text-white text-xs lg:text-sm max-w-2xl mx-auto px-4">
+    Entenda como funciona nossa consulta e como cuidamos do seu bem-estar.
+  </p>
 
-        <div className="flex flex-col lg:flex-row items-start gap-24 pt-12">
-          <div className="lg:w-2/5 w-full flex justify-end">
-            <div className="w-full max-w-[400px]">
-              <video
-                className="w-full h-auto max-h-[600px] rounded-lg shadow-md"
-                controls
-              >
-                <source src={VideoBlueZone} type="video/mp4" />
-                Seu navegador não suporta o elemento de vídeo.
-              </video>
-              <div className="flex items-center justify-center gap-2 pt-4 lg:pt-6 group cursor-pointer relative">
-                <div className="absolute inset-0 bg-amber-400/0 group-hover:bg-amber-400/10 blur-md rounded-full transition-all duration-300"></div>
-                <div className="bg-amber-500 rounded-full p-2 relative z-10 transition-transform duration-300 group-hover:scale-110 hover:bg-white">
-                  <a
-                    href="https://www.instagram.com/bluezonesp/"
-                    aria-label="Instagram @bluezonesp"
-                  >
-                    <FaInstagram
-                      size={20}
-                      className="text-white hover:text-amber-500"
-                    />
-                  </a>
-                </div>
-                <a
-                  href="https://www.instagram.com/bluezonesp/"
-                  target="_blank"
-                  aria-label="Instagram @bluezonesp"
-                >
-                  <p className="text-gray-300 text-base lg:text-[18px] relative z-10 transition-all duration-300 group-hover:text-gray-100">
-                    @bluezonesp
-                  </p>
-                </a>
-              </div>
-            </div>
+  <div className="flex flex-col lg:flex-row items-start gap-24 pt-12">
+    <div className="lg:w-2/5 w-full flex justify-center lg:justify-end">
+      <div className="w-full max-w-[400px]">
+        <video
+          className="w-full h-auto max-h-[600px] rounded-lg shadow-md"
+          controls
+        >
+          <source src={VideoBlueZone} type="video/mp4" />
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <div className="flex items-center justify-center gap-2 pt-4 lg:pt-6 group cursor-pointer relative">
+          <div className="absolute inset-0 bg-amber-400/0 group-hover:bg-amber-400/10 blur-md rounded-full transition-all duration-300"></div>
+          <div className="bg-amber-500 rounded-full p-2 relative z-10 transition-transform duration-300 group-hover:scale-110 hover:bg-white">
+            <a
+              href="https://www.instagram.com/bluezonesp/"
+              aria-label="Instagram @bluezonesp"
+            >
+              <FaInstagram
+                size={20}
+                className="text-white hover:text-amber-500"
+              />
+            </a>
           </div>
+          <a
+            href="https://www.instagram.com/bluezonesp/"
+            target="_blank"
+            aria-label="Instagram @bluezonesp"
+          >
+            <p className="text-gray-300 text-base lg:text-[18px] relative z-10 transition-all duration-300 group-hover:text-gray-100">
+              @bluezonesp
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
 
           <div className="lg:w-2/5 w-full flex flex-col gap-4 text-justify">
             <h3 className="text-lg font-semibold flex items-center gap-2 font-marcellus text-gray-100">
@@ -243,18 +243,9 @@ function Sobre() {
         </div>
       </div>
 
-      <div className="bg-white">
-        <svg
-          viewBox="0 0 1440 120"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,0 C480,120 960,0 1440,120 L1440,0 L0,0 Z"
-            fill="#B58E4F"
-          />
-        </svg>
-        <h2 className="font-marcellus font-semibold  lg:pb-8 text-xl lg:text-3xl text-[#B38A2C] text-center uppercase pt-2">
+      <div className="bg-black">
+        
+        <h2 className="font-marcellus font-semibold lg:pb-8 text-xl lg:text-3xl text-[#D3AF37] text-center uppercase pt-2">
           Resultados Comprovados
         </h2>
         <div className="flex flex-wrap justify-center gap-10 pb-24 pt-12">
@@ -262,9 +253,9 @@ function Sobre() {
             <img
               src={Hipertrofia}
               alt="Resultado de um paciente após tratamento de hipertrofia"
-              className="w-[350px] h-[350px] object-cover"
+              className="w-[350px] h-[350px] object-cover rounded-lg shadow-lg"
             />
-            <p className="pt-3 text-sm text-gray-600">
+            <p className="pt-3 text-sm text-white">
               Resultado final de um paciente após o tratamento de hipertrofia.
             </p>
           </div>
@@ -273,9 +264,9 @@ function Sobre() {
             <img
               src={Hipertrofia2}
               alt="Resultado de um paciente após tratamento de hipertrofia"
-              className="w-[350px] h-[350px] object-cover"
+              className="w-[350px] h-[350px] object-cover rounded-lg shadow-lg"
             />
-            <p className="pt-3 text-sm text-gray-600">
+            <p className="pt-3 text-sm text-white">
               Resultado final de um paciente após o tratamento de hipertrofia.
             </p>
           </div>
@@ -284,9 +275,9 @@ function Sobre() {
             <img
               src={Emagrecimento}
               alt="Resultado de um paciente após tratamento de emagrecimento"
-              className="w-[350px] h-[350px] object-cover"
+              className="w-[350px] h-[350px] object-cover rounded-lg shadow-lg"
             />
-            <p className="pt-3 text-sm text-gray-600">
+            <p className="pt-3 text-sm text-white">
               Resultado final de um paciente após o tratamento de emagrecimento.
             </p>
           </div>

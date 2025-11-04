@@ -30,6 +30,24 @@ function Menu() {
     setOpen(false);
   };
 
+  const handleScrollClick = (sectionId, closeMenu = false) => {
+    if (closeMenu) closeMobileMenu();
+    
+    const currentPath = window.location.pathname;
+
+    if (currentPath === "/") {
+   
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+     
+      localStorage.setItem(`scrollTo${sectionId.charAt(0).toUpperCase() + sectionId.slice(1)}`, "true");
+      window.location.href = `/#${sectionId}`;
+    }
+  };
+
   return (
     <div className="flex items-center justify-between bg-white px-2 sm:px-4 lg:px-6 h-16 shadow-md relative">
       
@@ -49,7 +67,7 @@ function Menu() {
         <ul className="flex gap-4 lg:gap-8 text-black items-center text-sm lg:text-base">
           <a href="/"><li className="hover:text-gray-800 cursor-pointer">Início</li></a>
           <a href="/sobre"><li className="hover:text-gray-800 cursor-pointer">Sobre</li></a>
-         
+
           <li
             className="relative cursor-pointer flex items-center justify-center"
             onMouseEnter={handleMouseEnter}
@@ -69,10 +87,19 @@ function Menu() {
               </ul>
             )}
           </li>
+
+       
+         
+          <li
+            className="hover:text-gray-800 cursor-pointer"
+            onClick={() => handleScrollClick("duvidas")}
+          >
+            Dúvidas
+          </li>
         </ul>
       </div>
 
-     
+    
       <div className="md:hidden flex items-center">
         <button 
           onClick={toggleMobileMenu}
@@ -82,7 +109,7 @@ function Menu() {
         </button>
       </div>
 
-  
+      
       {mobileMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-lg z-50 md:hidden">
           <ul className="flex flex-col py-4">
@@ -93,7 +120,7 @@ function Menu() {
               <li className="px-6 py-3 hover:bg-gray-100 border-b">Sobre</li>
             </a>
             
-          
+           
             <li className="border-b">
               <div 
                 className="px-6 py-3 flex justify-between items-center hover:bg-gray-100 cursor-pointer"
@@ -130,7 +157,16 @@ function Menu() {
               )}
             </li>
 
-   
+           
+            
+
+            
+            <li 
+              className="px-6 py-3 hover:bg-gray-100 border-b cursor-pointer"
+              onClick={() => handleScrollClick("duvidas", true)}
+            >
+              Dúvidas
+            </li>
           </ul>
         </div>
       )}

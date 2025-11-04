@@ -10,9 +10,9 @@ function Sobre() {
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-400/10 rounded-full blur-[90px]"></div>
 
       <div className="mb-8 lg:mb-10 relative z-10">
-        <h1 className="text-[#D3AF37] font-marcellus font-semibold text-2xl lg:text-4xl pb-2 relative inline-block">
+        <h2 className="text-[#D3AF37] font-marcellus font-semibold text-2xl lg:text-4xl pb-2 relative inline-block">
           Dr. Thiago Garcia
-        </h1>
+        </h2>
         <h2 className="text-gray-300 font-marcellus font-semibold mt-2 relative text-sm lg:text-base">
           MÉDICO – CRM SP 217222
           <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-16 lg:w-24 h-0.5 bg-gray-400/40 blur"></div>
@@ -32,13 +32,28 @@ function Sobre() {
 
           <div className="flex items-center justify-center gap-2 pt-4 lg:pt-6 group cursor-pointer relative">
             <div className="absolute inset-0 bg-amber-400/0 group-hover:bg-amber-400/10 blur-md rounded-full transition-all duration-300"></div>
-            <div className="bg-amber-500 rounded-full p-2 relative z-10 transition-transform duration-300 group-hover:scale-110 hover:bg-white">
-              <a href="https://www.instagram.com/thiagogarciadr/"><CgInstagram size={20} className="text-white hover:text-amber-500" /></a>
-            </div>
-            <a href="https://www.instagram.com/thiagogarciadr/" target="_blank"><p className="text-gray-300 text-base lg:text-xl relative z-10 transition-all duration-300 group-hover:text-gray-300">
-              @thiagogarciadr
-            </p>
-            </a>
+           <div className="bg-amber-500 rounded-full p-2 relative z-10 transition-transform duration-300 group-hover:scale-110 hover:bg-white">
+  <a 
+    href="https://www.instagram.com/thiagogarciadr/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span className="sr-only">Perfil do Dr. Thiago Garcia no Instagram</span>
+    <CgInstagram size={20} className="text-white hover:text-amber-500" />
+  </a>
+</div>
+
+          <a 
+  href="https://www.instagram.com/thiagogarciadr/"
+  aria-label="Perfil do Dr. Thiago Garcia no Instagram (@thiagogarciadr)"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-300 text-base lg:text-xl relative z-10 transition-all duration-300 group-hover:text-gray-300"
+>
+  <span aria-hidden="true">@thiagogarciadr</span>
+</a>
+
+
           </div>
         </div>
 
