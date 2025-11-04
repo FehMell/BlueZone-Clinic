@@ -222,7 +222,7 @@ function Menopausa() {
 
        <button 
           onClick={() => swiperInstance?.slidePrev()}
-          className={`absolute left-[-12px] top-[160px] -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
+          className={`absolute left-[-12px] top-[180px] -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
             isBeginning ? 'opacity-0 pointer-events-none' : 'opacity-100'
           }`}
         >
@@ -230,7 +230,7 @@ function Menopausa() {
         </button>
         <button 
           onClick={() => swiperInstance?.slideNext()}
-          className={`absolute right-[-12px] top-[160px] -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
+          className={`absolute right-[-12px] top-[180px] -translate-y-1/2 z-10 p-2 lg:p-3 hover:scale-110 lg:hover:scale-125 transform transition duration-300 ${
             isEnd ? 'opacity-0 pointer-events-none' : 'opacity-100'
           }`}
         >
