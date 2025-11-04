@@ -49,12 +49,7 @@ function Inicio() {
           <MdLocationOn size={14} className="sm:w-4 sm:h-4 lg:w-5 lg:h-5"/>Jardim Paulista - Atendimento em São Paulo
         </p>
 
-        <div className="text-center">
-          <p className="text-xs font-manrope pt-3 sm:pt-4 text-black">DR. THIAGO GARCIA | CRM-SP 217222</p>
-          <p className="text-xs font-manrope text-black">DIRETOR CLÍNICO</p>
-          <p className="text-xs font-manrope text-black">NUTROLOGIA ESPORTIVA E CLÍNICA</p>
-        </div>
-
+      
         <style jsx>{`
           @keyframes shimmer {
             0% { left: -50%; opacity: 0; }
