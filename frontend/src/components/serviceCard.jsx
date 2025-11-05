@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ icon, title, description, className = "", showButton = true, link }) => {
   return (
-    <div className={`relative bg-white border border-[#D3AF37] rounded-tr-[50px] rounded-bl-[50px] p-8 max-w-md mx-auto min-h-[300px] flex flex-col
+    <div className={`relative bg-white border border-[#D3AF37] rounded-tr-[50px] rounded-bl-[50px] p-6 max-w-md mx-auto min-h-[300px] flex flex-col
       ${className} `}>
 
       
       {icon && (
-        <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D3AF37] text-white p-3 shadow-lg z-10 flex items-center justify-center">
+        <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D3AF37] text-white p-4 shadow-lg z-10 flex items-center justify-center">
           {React.createElement(icon, { className: "w-6 h-6" })}
         </div>
       )}

@@ -185,10 +185,12 @@ function ServicesSection() {
         .swiper-pagination-bullet {
           background-color: #D3AF37 !important;
           opacity: 0.4;
+          display: none;
         }
         .swiper-pagination-bullet-active {
           background-color: #D3AF37 !important;
           opacity: 1;
+          display: none;
         }
       `}</style>
     </div>
