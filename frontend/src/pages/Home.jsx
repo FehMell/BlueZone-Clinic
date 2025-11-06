@@ -11,7 +11,7 @@ import LogoBlueZone from "../images/logobluezonee.webp"
 
 function Home() {
   return (
-    <div className="relative">
+     <div className="relative overflow-x-hidden">
       <Inicio />
 
       <Sobre />
