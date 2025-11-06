@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { RiArrowDropUpFill, RiMenu3Line, RiCloseLine } from "react-icons/ri";
-
+import { Link } from "react-router-dom";
 
 function Menu() {
   const [open, setOpen] = useState(false);
@@ -13,12 +13,7 @@ function Menu() {
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setOpen(false), 200); 
-  };
-
-  const toggleDropdown = (e) => {
-    e.stopPropagation(); 
-    setOpen(!open);
+    timeoutRef.current = setTimeout(() => setOpen(false), 200);
   };
 
   const toggleMobileMenu = () => {
@@ -32,7 +27,7 @@ function Menu() {
 
   const handleScrollClick = (sectionId, closeMenu = false) => {
     if (closeMenu) closeMobileMenu();
-    
+
     const currentPath = window.location.pathname;
 
     if (currentPath === "/") {
@@ -41,7 +36,10 @@ function Menu() {
         section.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      localStorage.setItem(`scrollTo${sectionId.charAt(0).toUpperCase() + sectionId.slice(1)}`, "true");
+      localStorage.setItem(
+        `scrollTo${sectionId.charAt(0).toUpperCase() + sectionId.slice(1)}`,
+        "true"
+      );
       window.location.href = `/#${sectionId}`;
     }
   };
@@ -49,29 +47,27 @@ function Menu() {
   return (
     <nav className="flex items-center justify-between bg-white px-2 sm:px-4 lg:px-6 h-16 shadow-md relative" aria-label="Menu principal">
       
-    
       <div className="px-2 sm:px-4 lg:px-32">
-        <a href="/" onClick={closeMobileMenu} aria-label="Página inicial">
+        <Link to="/" onClick={closeMobileMenu} aria-label="Página inicial">
           <img
             src="https://bluezoneclinic.com.br/wp-content/uploads/2024/12/Bluezone-logo-2.svg"
             alt="Logo Bluezone"
             className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
           />
-        </a>
+        </Link>
       </div>
 
-      
       <div className="hidden md:flex justify-end pr-4 lg:pr-20">
         <ul className="flex gap-4 lg:gap-8 text-black items-center text-sm lg:text-base">
           <li>
-            <a href="/" className="hover:text-gray-800 cursor-pointer block py-2">
+            <Link to="/" className="hover:text-gray-800 block py-2">
               Início
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/sobre" className="hover:text-gray-800 cursor-pointer block py-2">
+            <Link to="/sobre" className="hover:text-gray-800 block py-2">
               Sobre
-            </a>
+            </Link>
           </li>
 
           <li
@@ -79,83 +75,52 @@ function Menu() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-           <button  onClick={() => handleScrollClick("tratamentos")}
-              className="hover:text-gray-800 cursor-pointer flex items-center justify-center py-2 focus:outline-none focus:ring-0 focus:ring-gray-500 "
+            <button
+              onClick={() => handleScrollClick("tratamentos")}
+              className="hover:text-gray-800 flex items-center justify-center py-2 focus:outline-none"
               aria-expanded={open}
               aria-haspopup="true"
               aria-label="Abrir menu de tratamentos"
             >
-             Tratamentos  
+              Tratamentos
             </button>
-            
+
             {open && (
-              <ul 
-                className="absolute top-full left-0 mt-1 text-black shadow-lg py-2 px-1 w-48 max-h-80 overflow-y-auto bg-white z-50 font-manrope text-xs"
-                role="menu"
-                aria-label="Submenu de tratamentos"
-              >
+              <ul className="absolute top-full left-0 mt-1 text-black shadow-lg py-2 px-1 w-48 max-h-80 overflow-y-auto bg-white z-50 font-manrope text-xs" role="menu" aria-label="Submenu de tratamentos">
                 <li role="none">
-                  <a 
-                    href="/emagrecimento" 
-                    className="block px-4 py-1 hover:text-white hover:bg-gray-800"
-                    role="menuitem"
-                  >
+                  <Link to="/emagrecimento" className="block px-4 py-1 hover:text-white hover:bg-gray-800" role="menuitem">
                     Emagrecimento Saudável
-                  </a>
+                  </Link>
                 </li>
                 <li role="none">
-                  <a 
-                    href="/estetica" 
-                    className="block px-4 py-1 hover:text-white hover:bg-gray-800"
-                    role="menuitem"
-                  >
+                  <Link to="/estetica" className="block px-4 py-1 hover:text-white hover:bg-gray-800" role="menuitem">
                     Estética
-                  </a>
+                  </Link>
                 </li>
                 <li role="none">
-                  <a 
-                    href="/hipertrofia" 
-                    className="block px-4 py-1 hover:text-white hover:bg-gray-800"
-                    role="menuitem"
-                  >
+                  <Link to="/hipertrofia" className="block px-4 py-1 hover:text-white hover:bg-gray-800" role="menuitem">
                     Hipertrofia
-                  </a>
+                  </Link>
                 </li>
                 <li role="none">
-                  <a 
-                    href="/menopausa" 
-                    className="block px-4 py-1 hover:text-white hover:bg-gray-800"
-                    role="menuitem"
-                  >
+                  <Link to="/menopausa" className="block px-4 py-1 hover:text-white hover:bg-gray-800" role="menuitem">
                     Menopausa
-                  </a>
+                  </Link>
                 </li>
                 <li role="none">
-                  <a 
-                    href="/reposicao-hormonal-masculina" 
-                    className="block px-4 py-1 hover:text-white hover:bg-gray-800"
-                    role="menuitem"
-                  >
+                  <Link to="/reposicao-hormonal-masculina" className="block px-4 py-1 hover:text-white hover:bg-gray-800" role="menuitem">
                     Reposição Hormonal Masculina
-                  </a>
+                  </Link>
                 </li>
                 <li role="none">
-                  <a 
-                    href="/terapias-injetaveis" 
-                    className="block px-4 py-1 hover:text-white hover:bg-gray-800"
-                    role="menuitem"
-                  >
+                  <Link to="/terapias-injetaveis" className="block px-4 py-1 hover:text-white hover:bg-gray-800" role="menuitem">
                     Terapia Injetáveis
-                  </a>
+                  </Link>
                 </li>
                 <li role="none">
-                  <a 
-                    href="/implantes-hormonais" 
-                    className="block px-4 py-1 hover:text-white hover:bg-gray-800"
-                    role="menuitem"
-                  >
+                  <Link to="/implantes-hormonais" className="block px-4 py-1 hover:text-white hover:bg-gray-800" role="menuitem">
                     Implantes Hormonais
-                  </a>
+                  </Link>
                 </li>
               </ul>
             )}
@@ -164,7 +129,7 @@ function Menu() {
           <li>
             <button
               onClick={() => handleScrollClick("duvidas")}
-              className="hover:text-gray-800 cursor-pointer py-2 focus:outline-none focus:ring-0 focus:ring-gray-500"
+              className="hover:text-gray-800 py-2 focus:outline-none"
               aria-label="Ir para seção de dúvidas"
             >
               Dúvidas
@@ -173,152 +138,87 @@ function Menu() {
         </ul>
       </div>
 
-     
+      {/* Menu mobile */}
       <div className="md:hidden flex items-center">
         <button 
           onClick={toggleMobileMenu}
-          className="text-2xl text-black focus:outline-none focus:ring-2 focus:ring-gray-500 p-2 rounded"
+          className="text-2xl text-black focus:outline-none p-2 rounded"
           aria-expanded={mobileMenuOpen}
-          aria-controls="mobile-menu"
           aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
           {mobileMenuOpen ? <RiCloseLine aria-hidden="true" /> : <RiMenu3Line aria-hidden="true" />}
         </button>
       </div>
 
-      
       {mobileMenuOpen && (
-        <div 
-          id="mobile-menu"
-          className="absolute top-16 left-0 w-full bg-white shadow-lg z-50 md:hidden"
-          role="dialog"
-          aria-label="Menu mobile"
-        >
+        <div id="mobile-menu" className="absolute top-16 left-0 w-full bg-white shadow-lg z-50 md:hidden" role="dialog" aria-label="Menu mobile">
           <ul className="flex flex-col py-4">
             <li className="border-b">
-              <a 
-                href="/" 
-                onClick={closeMobileMenu}
-                className="block px-6 py-3 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
-                aria-label="Página inicial"
-              >
+              <Link to="/" onClick={closeMobileMenu} className="block px-6 py-3 hover:bg-gray-100">
                 Início
-              </a>
+              </Link>
             </li>
             <li className="border-b">
-              <a 
-                href="/sobre" 
-                onClick={closeMobileMenu}
-                className="block px-6 py-3 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
-                aria-label="Sobre nós"
-              >
+              <Link to="/sobre" onClick={closeMobileMenu} className="block px-6 py-3 hover:bg-gray-100">
                 Sobre
-              </a>
+              </Link>
             </li>
-            
-           
             <li className="border-b">
               <button 
-                className="w-full px-6 py-3 flex justify-between items-center hover:bg-gray-100 cursor-pointer focus:outline-none focus:bg-gray-100"
+                className="w-full px-6 py-3 flex justify-between items-center hover:bg-gray-100 cursor-pointer"
                 onClick={() => setOpen(!open)}
                 aria-expanded={open}
                 aria-controls="mobile-treatments-submenu"
-                aria-label="Abrir menu de tratamentos"
               >
                 <span>Tratamentos</span>
-                <RiArrowDropUpFill 
-                  className={`transform ${open ? 'rotate-180' : ''} transition-transform`} 
-                  aria-hidden="true" 
-                />
+                <RiArrowDropUpFill className={`transform ${open ? 'rotate-180' : ''} transition-transform`} aria-hidden="true" />
               </button>
-              
+
               {open && (
-                <ul 
-                  id="mobile-treatments-submenu"
-                  className="bg-gray-50"
-                  role="menu"
-                  aria-label="Submenu de tratamentos"
-                >
+                <ul id="mobile-treatments-submenu" className="bg-gray-50" role="menu" aria-label="Submenu de tratamentos">
                   <li role="none">
-                    <a 
-                      href="/emagrecimento" 
-                      onClick={closeMobileMenu}
-                      className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm focus:bg-gray-200 focus:outline-none"
-                      role="menuitem"
-                    >
+                    <Link to="/emagrecimento" onClick={closeMobileMenu} className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm">
                       Emagrecimento Saudável
-                    </a>
+                    </Link>
                   </li>
                   <li role="none">
-                    <a 
-                      href="/estetica" 
-                      onClick={closeMobileMenu}
-                      className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm focus:bg-gray-200 focus:outline-none"
-                      role="menuitem"
-                    >
+                    <Link to="/estetica" onClick={closeMobileMenu} className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm">
                       Estética
-                    </a>
+                    </Link>
                   </li>
                   <li role="none">
-                    <a 
-                      href="/hipertrofia" 
-                      onClick={closeMobileMenu}
-                      className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm focus:bg-gray-200 focus:outline-none"
-                      role="menuitem"
-                    >
+                    <Link to="/hipertrofia" onClick={closeMobileMenu} className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm">
                       Hipertrofia
-                    </a>
+                    </Link>
                   </li>
                   <li role="none">
-                    <a 
-                      href="/menopausa" 
-                      onClick={closeMobileMenu}
-                      className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm focus:bg-gray-200 focus:outline-none"
-                      role="menuitem"
-                    >
+                    <Link to="/menopausa" onClick={closeMobileMenu} className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm">
                       Menopausa
-                    </a>
+                    </Link>
                   </li>
                   <li role="none">
-                    <a 
-                      href="/reposicao-hormonal-masculina" 
-                      onClick={closeMobileMenu}
-                      className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm focus:bg-gray-200 focus:outline-none"
-                      role="menuitem"
-                    >
+                    <Link to="/reposicao-hormonal-masculina" onClick={closeMobileMenu} className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm">
                       Reposição Hormonal Masculina
-                    </a>
+                    </Link>
                   </li>
                   <li role="none">
-                    <a 
-                      href="/terapias-injetaveis" 
-                      onClick={closeMobileMenu}
-                      className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm focus:bg-gray-200 focus:outline-none"
-                      role="menuitem"
-                    >
-                      Terapia Injetáveis
-                    </a>
+                    <Link to="/terapias-injetaveis" onClick={closeMobileMenu} className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm">
+                      Terapias Injetáveis
+                    </Link>
                   </li>
                   <li role="none">
-                    <a 
-                      href="/implantes-hormonais" 
-                      onClick={closeMobileMenu}
-                      className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm focus:bg-gray-200 focus:outline-none"
-                      role="menuitem"
-                    >
+                    <Link to="/implantes-hormonais" onClick={closeMobileMenu} className="block pl-8 pr-4 py-2 hover:bg-gray-200 text-sm">
                       Implantes Hormonais
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               )}
             </li>
 
-           
             <li className="border-b">
               <button
                 onClick={() => handleScrollClick("duvidas", true)}
-                className="w-full text-left px-6 py-3 hover:bg-gray-100 cursor-pointer focus:outline-none focus:bg-gray-100"
-                aria-label="Ir para seção de dúvidas"
+                className="w-full text-left px-6 py-3 hover:bg-gray-100 cursor-pointer"
               >
                 Dúvidas
               </button>
