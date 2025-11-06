@@ -14,6 +14,8 @@ Desenvolvida por [FehMell](https://github.com/FehMell)
 ###  Programação Front-End
 Desenvolvida por [FehMell](https://github.com/FehMell)
 
+Desenvolvido por [Liv-Inn](https://github.com/liv-inn)
+
 
 
 ###  Objetivo
