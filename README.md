@@ -44,7 +44,8 @@ Melhorar a experiência do usuário (UX) e a organização visual, trazendo um d
   - texto antigo de longevidade saudável  
   - explicação da consulta  
   - sessão “Resultados Comprovados” com imagens e vídeo.
+- Criada sessão "perguntas frequentes", "contato" do menu foi trocado por "duvidas" e associada a essa sessão.
 
 
 
-✨ Projeto em desenvolvimento.
+✨ Projeto finalizado
