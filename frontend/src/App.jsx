@@ -49,7 +49,7 @@ function App() {
         <Route path="/terapias-injetaveis" element={<TerapiasInjt />} />
         <Route path="/sobre" element={<Sobre />} />
       </Routes>
-   
+ 
       <Footer />
     </HashRouter>
   );

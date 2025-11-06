@@ -26,7 +26,7 @@ function ServicesSection() {
       ),
       icon: FaLeaf,
       showButton: true,
-      link: "/emagrecimento"
+      link: "/#/emagrecimento"
     },
     {
       title: "Reposição Hormonal",
@@ -34,7 +34,7 @@ function ServicesSection() {
         "Indicada para homens com baixos níveis de testosterona. Melhora energia, libido e desempenho físico.",
       icon: FaHeartbeat,
       showButton: true,
-      link: "/reposicao-hormonal-masculina"
+      link: "/#/reposicao-hormonal-masculina"
     },
     {
       title: "Hipertrofia Muscular e Alta Performance",
@@ -42,7 +42,7 @@ function ServicesSection() {
         "Plano personalizado para ganho de força e massa muscular, com orientações nutricionais e hormonais.",
       icon: FaDumbbell,
       showButton: true,
-      link: "/hipertrofia"
+      link: "/#/hipertrofia"
     },
     {
       title: "Implantes Hormonais",
@@ -50,7 +50,7 @@ function ServicesSection() {
         "Implantes subcutâneos que equilibram hormônios e reduzem sintomas como cansaço e baixa libido.",
       icon: FaSyringe,
       showButton: true,
-      link: "/implantes-hormonais"
+      link: "/#/implantes-hormonais"
     },
     {
       title: "Menopausa",
@@ -58,7 +58,7 @@ function ServicesSection() {
         "Tratamento que alivia sintomas da menopausa e melhora o bem-estar e a qualidade de vida das mulheres.",
       icon: FaHeart,
       showButton: true,
-      link: "/menopausa"
+      link: "/#/menopausa"
     },
     {
       title: "Terapias Injetáveis",
@@ -66,7 +66,7 @@ function ServicesSection() {
         "Vitaminas, minerais e antioxidantes aplicados de forma personalizada para mais energia e vitalidade.",
       icon: FaSyringe,
       showButton: true,
-      link: "/terapias-injetaveis"
+      link: "/#/terapias-injetaveis"
     },
     {
       title: "Bioimpedância",
@@ -95,7 +95,7 @@ function ServicesSection() {
         "Procedimentos que promovem firmeza, rejuvenescimento e valorizam sua autoestima.",
       icon: FaSpa,
       showButton: true,
-      link: "/estetica"
+      link: "/#/estetica"
     }
   ];
 
