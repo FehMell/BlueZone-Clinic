@@ -3,14 +3,12 @@ import { useNavigate } from 'react-router-dom';
 
 const ServiceCard = ({ icon, title, description, className = "", showButton = true, link }) => {
   const navigate = useNavigate();
-
   const handleClick = () => {
     if (!link) return;
-    // Ajusta o link para HashRouter
-    const route = link.replace("/BlueZone-Clinic/#", "");
-    navigate(route);        // Navegação SPA
-    window.scrollTo(0, 0); // Vai para o topo da página
+    window.location.href = link; // muda a rota no GitHub Pages
+    window.scrollTo(0, 0);      // força scroll pro topo
   };
+
 
   return (
     <div className={`relative bg-white border border-[#D3AF37] rounded-tr-[50px] rounded-bl-[50px] p-6 max-w-md mx-auto min-h-[300px] flex flex-col
