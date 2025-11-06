@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { RiArrowDropUpFill, RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 function Menu() {
   const [open, setOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const timeoutRef = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Scroll automático caso o usuário venha de outra página
   useEffect(() => {
@@ -52,12 +54,21 @@ function Menu() {
       // Se a seção existe na página atual, faz scroll
       section.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Se não existe (usuário em outra rota), armazena e redireciona para a Home
+      // Se não existe, navega para a Home e faz scroll depois
       localStorage.setItem(
         `scrollTo${sectionId.charAt(0).toUpperCase() + sectionId.slice(1)}`,
         "true"
       );
-      window.location.href = "/";
+
+      if (location.pathname !== "/") {
+        navigate("/"); // vai para Home
+      } else {
+        // caso já esteja na Home mas a seção ainda não exista
+        setTimeout(() => {
+          const sec = document.getElementById(sectionId);
+          if (sec) sec.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
     }
   };
 
