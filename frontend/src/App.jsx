@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Estetica from "./pages/Estetica";
 import Menu from "./components/menu";
@@ -14,7 +14,6 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    
     if (localStorage.getItem("scrollToDuvidas") === "true") {
       const section = document.getElementById("duvidas");
       if (section) {
@@ -23,7 +22,6 @@ function App() {
       }
     }
 
-   
     if (localStorage.getItem("scrollToTratamentos") === "true") {
       const section = document.getElementById("tratamentos");
       if (section) {
@@ -34,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/BlueZone-Clinic">
+    <HashRouter>
       <Menu />
 
       <Routes>
@@ -51,9 +49,9 @@ function App() {
         <Route path="/terapias-injetaveis" element={<TerapiasInjt />} />
         <Route path="/sobre" element={<Sobre />} />
       </Routes>
-
+   
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
