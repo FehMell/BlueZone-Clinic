@@ -165,7 +165,7 @@ function Estetica() {
             <div className="w-full flex justify-center mt-8 mb-4">
               <div className="border-2 border-[#D3AF37] px-1 py-1 hover:scale-110 transform transition-transform duration-300">
                 <a
-                  href="https://wa.me/5511945197405?text=Olá!%20Quero%20mais%20informações%20sobre%20implantes%20hormonais%20e%20agendar%20uma%20avaliação."
+                  href="https://wa.me/5511945197405?text=Olá!%20Quero%20mais%20informações%20sobre%20estetica."
                   target="_blank"
                   rel="noreferrer"
                 >
