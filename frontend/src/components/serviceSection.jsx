@@ -15,7 +15,7 @@ function ServicesSection() {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
 
-  const services = [
+   const services = [
     {
       title: "Emagrecimento Saudável",
       description: (
