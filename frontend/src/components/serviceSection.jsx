@@ -95,7 +95,7 @@ function ServicesSection() {
         "Procedimentos que promovem firmeza, rejuvenescimento e valorizam sua autoestima.",
       icon: FaSpa,
       showButton: true,
-      link: "/BlueZone-Clinic/#/estetica"
+      link: "/estetica"
     }
   ];
 
