@@ -19,8 +19,8 @@ function Footer() {
             <p className="font-manrope text-xs sm:text-sm">Jardim Paulista, São Paulo – SP.</p>
             
             <h3 className="text-lg md:text-xl font-marcellus py-3 sm:py-4 text-[#D3AF37] font-semibold">Horário de Funcionamento:</h3>
-            <p className="font-manrope text-xs sm:text-sm">Segunda à Sexta: 08h00 às 18h00.</p>
-            <p className="font-manrope text-xs sm:text-sm">Sábado: 09h00 às 13h00.</p>
+            <p className="font-manrope text-xs sm:text-sm">Segunda à Sexta: 09h00 às 18h00.</p>
+            <p className="font-manrope text-xs sm:text-sm">Sábado: 08h00 às 13h00.</p>
           </div>
 
          
@@ -43,7 +43,7 @@ function Footer() {
                 <MdOutlineMail className="text-white" size={16} />
               </div>
               <span className="break-all">contato@bluezoneclinic.com.br</span>
-            </div>
+            </div> 
 
             <h3 className="text-lg md:text-xl font-marcellus py-3 sm:py-4 text-[#D3AF37] font-semibold">Redes Sociais:</h3>
             
@@ -77,7 +77,7 @@ function Footer() {
           <div className="space-y-1 sm:space-y-2 px-4">
             <p className="text-white font-manrope text-xs sm:text-sm">Blue Zone Clinic LTDA | CNPJ 41.519.438/0001-68 | Registro: 998489</p>
             <p className="text-white font-manrope text-xs sm:text-sm">Diretor Técnico-Médico: Dr. Thiago Garcia | CRM-SP 217222</p>
-            <p className="text-white font-manrope text-xs sm:text-sm">Desenvolvido por @feh_mell</p>
+            <p className="text-white font-manrope text-xs sm:text-sm">Desenvolvido por @feh_mell e liv-inn (GitHub) </p>
           </div>
         </div>
       </div>
