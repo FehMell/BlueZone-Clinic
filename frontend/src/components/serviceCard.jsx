@@ -1,12 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ServiceCard = ({ icon, title, description, className = "", showButton = true, link }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!link) return;
+    // Ajusta o link para HashRouter
+    const route = link.replace("/BlueZone-Clinic/#", "");
+    navigate(route);        // Navegação SPA
+    window.scrollTo(0, 0); // Vai para o topo da página
+  };
+
   return (
     <div className={`relative bg-white border border-[#D3AF37] rounded-tr-[50px] rounded-bl-[50px] p-6 max-w-md mx-auto min-h-[300px] flex flex-col
-      ${className} `}>
-
-      
+      ${className} `}
+    >
       {icon && (
         <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#D3AF37] text-white p-4 shadow-lg z-10 flex items-center justify-center">
           {React.createElement(icon, { className: "w-6 h-6" })}
@@ -23,23 +32,16 @@ const ServiceCard = ({ icon, title, description, className = "", showButton = tr
 
       {showButton && link ? (
         <div className="text-center pt-6">
-          <Link 
-            to={link}
+          <button
             className="inline-block bg-white border-[#D3AF37] border-2 text-[#463D34] font-bold px-6 py-2 rounded-md transform transition-transform duration-300 hover:scale-110 hover:bg-[#B38A4B] text-sm cursor-pointer"
-            onClick={(e) => {
-              console.log('Link clicado:', link);
-              console.log('Tipo do link:', typeof link);
-              e.preventDefault();
-           
-              window.location.href = link;
-            }}
+            onClick={handleClick}
           >
             SAIBA MAIS
-          </Link>
+          </button>
         </div>
       ) : showButton && !link ? (
         <div className="text-center pt-6">
-          <button 
+          <button
             className="bg-gray-400 text-white font-bold px-6 py-2 rounded-md text-sm cursor-not-allowed opacity-70"
             disabled
           >
@@ -47,7 +49,7 @@ const ServiceCard = ({ icon, title, description, className = "", showButton = tr
           </button>
         </div>
       ) : (
-        <div className="h-8"></div> 
+        <div className="h-8"></div>
       )}
     </div>
   );
