@@ -9,23 +9,22 @@ function Menu() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Scroll automático caso o usuário venha de outra página
+  // Função para scroll
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Scroll automático com base no localStorage
   useEffect(() => {
-    const scrollToTratamentos = localStorage.getItem("scrollToTratamentos");
-    const scrollToDuvidas = localStorage.getItem("scrollToDuvidas");
-
-    if (scrollToTratamentos) {
-      const section = document.getElementById("tratamentos");
-      if (section) section.scrollIntoView({ behavior: "smooth" });
-      localStorage.removeItem("scrollToTratamentos");
+    const scrollTo = localStorage.getItem("scrollToSection");
+    if (scrollTo) {
+      scrollToSection(scrollTo);
+      localStorage.removeItem("scrollToSection");
     }
-
-    if (scrollToDuvidas) {
-      const section = document.getElementById("duvidas");
-      if (section) section.scrollIntoView({ behavior: "smooth" });
-      localStorage.removeItem("scrollToDuvidas");
-    }
-  }, []);
+  }, [location]);
 
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
@@ -36,39 +35,20 @@ function Menu() {
     timeoutRef.current = setTimeout(() => setOpen(false), 200);
   };
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
+  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
     setOpen(false);
   };
 
-  const handleScrollClick = (sectionId, closeMenu = false) => {
-    if (closeMenu) closeMobileMenu();
-
-    const section = document.getElementById(sectionId);
-
-    if (section) {
-      // Se a seção existe na página atual, faz scroll
-      section.scrollIntoView({ behavior: "smooth" });
+  const handleScrollClick = (sectionId) => {
+    if (location.pathname === "/") {
+      // Se já estiver na Home
+      scrollToSection(sectionId);
     } else {
-      // Se não existe, navega para a Home e faz scroll depois
-      localStorage.setItem(
-        `scrollTo${sectionId.charAt(0).toUpperCase() + sectionId.slice(1)}`,
-        "true"
-      );
-
-      if (location.pathname !== "/") {
-        navigate("/"); // vai para Home
-      } else {
-        // caso já esteja na Home mas a seção ainda não exista
-        setTimeout(() => {
-          const sec = document.getElementById(sectionId);
-          if (sec) sec.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      }
+      // Se estiver em outra página
+      localStorage.setItem("scrollToSection", sectionId);
+      navigate("/"); // vai para Home
     }
   };
 

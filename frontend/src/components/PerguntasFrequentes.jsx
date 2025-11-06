@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import WhatsappButton from './whatsappButton';
+import { useNavigate } from 'react-router-dom';
 
 function PerguntasFrequentes() {
+    const navigate = useNavigate();
+
+    // Verifica se precisa rolar para a seção "Sobre" quando voltar da outra página
+    useEffect(() => {
+        const scrollToSobre = localStorage.getItem("scrollToSobre");
+        if (scrollToSobre) {
+            const section = document.getElementById("sobre");
+            if (section) section.scrollIntoView({ behavior: "smooth" });
+            localStorage.removeItem("scrollToSobre");
+        }
+    }, []);
+
     return (
         <>
-            
-            <div className="bg-gray-50 py-16 lg:py-20" >
+            <div className="bg-gray-50 py-16 lg:py-20">
                 <div className="max-w-4xl mx-auto px-4">
                     <div className="text-center mb-12" id="duvidas">
                         <h2 className="font-marcellus text-3xl lg:text-4xl font-bold text-[#463D34] mb-4">
@@ -40,8 +52,7 @@ function PerguntasFrequentes() {
                                 Atende plano de saúde?
                             </h3>
                             <p className="font-manrope text-gray-600 text-sm leading-relaxed text-justify">
-                                Nosso atendimento na <span className="font-semibold"> Blue Zone Clinic </span> é exclusivamente <span className="font-semibold"> particular. </span>
-Oferecemos até duas notas fiscais por paciente, referentes as consultas médica e da nutricionista, para que possa solicitar reembolso junto ao seu convênio.
+                                Nosso atendimento na <span className="font-semibold">Blue Zone Clinic</span> é exclusivamente <span className="font-semibold">particular.</span> Oferecemos até duas notas fiscais por paciente, referentes às consultas médica e da nutricionista, para que possa solicitar reembolso junto ao seu convênio.
                             </p>
                         </div>
 
@@ -50,42 +61,46 @@ Oferecemos até duas notas fiscais por paciente, referentes as consultas médica
                                 Qual o tempo de duração da consulta?
                             </h3>
                             <p className="font-manrope text-gray-600 text-sm leading-relaxed text-justify">
-  A consulta inicial possui duração média de 60 minutos, período em que é realizada uma avaliação detalhada e individualizada de cada paciente. 
-  Para saber mais sobre o funcionamento da consulta, acesse a nossa página{" "}
-  <a 
-    href="/sobre" 
-    className="font-semibold text-black underline underline-offset-2 hover:text-salmon-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-salmon-500 rounded-sm transition-colors"
-  >
-    Sobre
-  </a>.
-</p>
+                                A consulta inicial possui duração média de 60 minutos, período em que é realizada uma avaliação detalhada e individualizada de cada paciente. 
+                                Para saber mais sobre o funcionamento da consulta, acesse a nossa página{" "}
+                                <span
+                                    onClick={() => {
+                                        navigate("/sobre"); // vai para a página Sobre
+    window.scrollTo(0, 0);
+                                    }}
+                                    className="font-semibold text-black underline underline-offset-2 hover:text-salmon-600 cursor-pointer"
+                                >
+                                    Sobre
+                                </span>.
+                            </p>
                         </div>
                     </div>
                   
- <div className="flex flex-col items-center justify-center pt-2 p-4 text-center space-y-2">
-  <p className="font-manrope text-gray-700 text-2xl font-semibold pb-2">
-    Restou alguma dúvida?
-  </p>
-  <p className="font-manrope text-gray-700 text-base pb-2">
-   Nossa equipe de atendimento está à disposição para ajudar no que for preciso
-  </p>
+                    <div className="flex flex-col items-center justify-center pt-2 p-4 text-center space-y-2">
+                        <p className="font-manrope text-gray-700 text-2xl font-semibold pb-2">
+                            Restou alguma dúvida?
+                        </p>
+                        <p className="font-manrope text-gray-700 text-base pb-2">
+                            Nossa equipe de atendimento está à disposição para ajudar no que for preciso
+                        </p>
 
-  <div className="mt-4 border-2 border-[#D3AF37] rounded-sm hover:scale-110 transform transition-transform duration-300 px-1 py-1 flex justify-center items-center">
-    <a
-      href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20a%20Blue%20Zone%20Clinic." target="_blank"
-      className="font-marcellus inline-flex items-center justify-center gap-2 bg-[#D3AF37] text-black font-semibold px-6 py-3 rounded-sm shadow-sm hover:bg-[#B38A4B] transition-colors focus:outline-none focus:ring-2 focus:ring-[#463D34]/50 text-base lg:text-base xl:text-base"
-      aria-label="Falar com nossa equipe"
-    >
-      Falar com nossa equipe
-    </a>
-  </div>
-</div>
-
+                        <div className="mt-4 border-2 border-[#D3AF37] rounded-sm hover:scale-110 transform transition-transform duration-300 px-1 py-1 flex justify-center items-center">
+                            <a
+                                href="https://wa.me/5511945197405?text=Olá!%20Gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20a%20Blue%20Zone%20Clinic."
+                                target="_blank"
+                                className="font-marcellus inline-flex items-center justify-center gap-2 bg-[#D3AF37] text-black font-semibold px-6 py-3 rounded-sm shadow-sm hover:bg-[#B38A4B] transition-colors focus:outline-none focus:ring-2 focus:ring-[#463D34]/50 text-base lg:text-base xl:text-base"
+                                aria-label="Falar com nossa equipe"
+                            >
+                                Falar com nossa equipe
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
-                    <div className="max-w-4xl mx-auto px-4 mt-6">
-                        <WhatsappButton />
-                    </div>
+                
+                <div className="max-w-4xl mx-auto px-4 mt-6">
+                    <WhatsappButton />
+                </div>
             </div>
         </>
     );
